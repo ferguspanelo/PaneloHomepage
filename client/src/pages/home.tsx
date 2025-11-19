@@ -16,11 +16,25 @@ const FadeIn = ({ children, delay = 0, className }: { children: React.ReactNode;
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-[#f8f5f2] text-[#1a1a1a] selection:bg-[#ffaa4c] selection:text-white overflow-hidden">
+    <div className="min-h-screen bg-[#f8f5f2] text-[#1a1a1a] selection:bg-[#ffaa4c] selection:text-white overflow-hidden relative">
       
+      {/* Continuous Aurora Background - Spanning Hero & Features */}
+      <div className="absolute top-0 left-0 right-0 h-[180vh] z-0 overflow-hidden pointer-events-none">
+        {/* Dark Orange - Dominant Top Left */}
+        <div className="absolute -top-[10%] -left-[10%] w-[90%] h-[60%] rounded-full bg-[#ea580c] blur-[130px] opacity-40 mix-blend-multiply animate-blob" style={{ animationDelay: '0s' }}></div>
+        
+        {/* Light Orange - Dominant Center/Right */}
+        <div className="absolute top-[5%] -right-[10%] w-[80%] h-[70%] rounded-full bg-[#fb923c] blur-[110px] opacity-50 mix-blend-multiply animate-blob" style={{ animationDelay: '2s' }}></div>
+        
+        {/* Blue - Transitioning in lower section */}
+        <div className="absolute top-[45%] -left-[10%] w-[60%] h-[60%] rounded-full bg-[#60a5fa] blur-[130px] opacity-30 mix-blend-multiply animate-blob" style={{ animationDelay: '4s' }}></div>
+        
+        {/* Grey - Bottom/Right anchor */}
+        <div className="absolute top-[40%] right-[0%] w-[50%] h-[60%] rounded-full bg-[#94a3b8] blur-[100px] opacity-40 mix-blend-multiply animate-blob" style={{ animationDelay: '1s' }}></div>
+      </div>
+
       {/* Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-50 px-6 py-6 flex justify-between items-center bg-transparent mix-blend-difference text-white">
-        {/* We use mix-blend-difference to ensure text is visible on any background, giving it that ethereal tech feel */}
         <div className="text-2xl font-bold tracking-tighter font-display">Panelo</div>
         <div className="hidden md:flex gap-8 text-sm font-medium tracking-wide">
           <a href="#features" className="hover:opacity-70 transition-opacity">Capabilities</a>
@@ -30,27 +44,12 @@ export default function Home() {
       </nav>
 
       {/* Hero Section */}
-      <section className="relative min-h-screen flex flex-col items-center justify-center text-center px-4 py-20">
-        {/* Aurora Gradient Background */}
-        <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
-          {/* Orange Blob */}
-          <div className="absolute -top-[20%] -left-[10%] w-[70%] h-[70%] rounded-full bg-[#fb923c] blur-[120px] opacity-50 mix-blend-multiply animate-blob" style={{ animationDelay: '0s' }}></div>
-          
-          {/* Grey/Blue Blob */}
-          <div className="absolute top-[10%] -right-[10%] w-[60%] h-[60%] rounded-full bg-[#94a3b8] blur-[100px] opacity-60 mix-blend-multiply animate-blob" style={{ animationDelay: '2s' }}></div>
-          
-          {/* Blue Blob */}
-          <div className="absolute -bottom-[20%] left-[20%] w-[80%] h-[80%] rounded-full bg-[#60a5fa] blur-[120px] opacity-40 mix-blend-multiply animate-blob" style={{ animationDelay: '4s' }}></div>
-          
-          {/* Light Grey Blob */}
-          <div className="absolute bottom-[10%] right-[20%] w-[50%] h-[50%] rounded-full bg-[#cbd5e1] blur-[100px] opacity-50 mix-blend-multiply animate-blob" style={{ animationDelay: '0.5s' }}></div>
-        </div>
-
-        <div className="relative z-10 max-w-5xl mx-auto space-y-8">
+      <section className="relative z-10 min-h-screen flex flex-col items-center justify-center text-center px-4 py-20">
+        <div className="max-w-5xl mx-auto space-y-8">
           <FadeIn delay={0.2}>
             <div className="mb-8 flex justify-center">
               <div className="flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/30 backdrop-blur-md border border-white/40 text-sm font-medium text-slate-800 shadow-sm">
-                <Sparkles className="w-3.5 h-3.5 text-orange-500" />
+                <Sparkles className="w-3.5 h-3.5 text-orange-600" />
                 <span>AI-Powered Product Intelligence</span>
               </div>
             </div>
@@ -59,14 +58,14 @@ export default function Home() {
           <FadeIn delay={0.3}>
             <h1 className="text-6xl md:text-8xl font-display font-semibold tracking-tight leading-[0.95] text-[#1a1a1a]">
               Identify your winners early. <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 via-blue-500 to-slate-500">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-700 via-orange-500 to-slate-600">
                 Launch smarter.
               </span>
             </h1>
           </FadeIn>
 
           <FadeIn delay={0.4}>
-            <p className="text-xl md:text-2xl text-slate-600 max-w-2xl mx-auto leading-relaxed font-light">
+            <p className="text-xl md:text-2xl text-slate-700 max-w-2xl mx-auto leading-relaxed font-light">
               Embed consumer insight into your product range architecture. Decode the why before you invest.
             </p>
           </FadeIn>
@@ -77,7 +76,7 @@ export default function Home() {
                 Start Predicting Demand
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </button>
-              <button className="px-8 py-4 rounded-full bg-white/50 backdrop-blur-sm border border-white/60 text-[#1a1a1a] font-medium text-lg hover:bg-white/80 transition-all shadow-sm hover:shadow-md active:scale-95">
+              <button className="px-8 py-4 rounded-full bg-white/40 backdrop-blur-sm border border-white/60 text-[#1a1a1a] font-medium text-lg hover:bg-white/70 transition-all shadow-sm hover:shadow-md active:scale-95">
                 Book a Demo
               </button>
             </div>
@@ -91,10 +90,13 @@ export default function Home() {
       </section>
 
       {/* Problem / Insight Section */}
-      <section id="features" className="py-32 px-4 relative bg-white/40 backdrop-blur-3xl">
+      <section id="features" className="py-32 px-4 relative z-10">
+        {/* Glass container for the section */}
+        <div className="absolute inset-0 bg-white/30 backdrop-blur-3xl -z-10"></div>
+        
         <div className="max-w-6xl mx-auto">
           <FadeIn>
-            <h2 className="text-4xl md:text-5xl font-display font-medium text-center mb-20">
+            <h2 className="text-4xl md:text-5xl font-display font-medium text-center mb-20 text-slate-900">
               Consumer-Informed Product Assortment
             </h2>
           </FadeIn>
@@ -102,7 +104,7 @@ export default function Home() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* Card 1 */}
             <FadeIn delay={0.1}>
-              <div className="h-full p-8 rounded-3xl bg-white/60 border border-white/80 shadow-sm hover:shadow-md transition-all group">
+              <div className="h-full p-8 rounded-3xl bg-white/50 border border-white/60 shadow-sm hover:shadow-md transition-all group backdrop-blur-sm">
                 <div className="w-12 h-12 rounded-2xl bg-orange-100 text-orange-600 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                   <Zap className="w-6 h-6" />
                 </div>
@@ -115,7 +117,7 @@ export default function Home() {
 
             {/* Card 2 */}
             <FadeIn delay={0.2}>
-              <div className="h-full p-8 rounded-3xl bg-white/60 border border-white/80 shadow-sm hover:shadow-md transition-all group">
+              <div className="h-full p-8 rounded-3xl bg-white/50 border border-white/60 shadow-sm hover:shadow-md transition-all group backdrop-blur-sm">
                 <div className="w-12 h-12 rounded-2xl bg-blue-100 text-blue-600 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                   <Users className="w-6 h-6" />
                 </div>
@@ -128,7 +130,7 @@ export default function Home() {
 
             {/* Card 3 */}
             <FadeIn delay={0.3}>
-              <div className="h-full p-8 rounded-3xl bg-white/60 border border-white/80 shadow-sm hover:shadow-md transition-all group">
+              <div className="h-full p-8 rounded-3xl bg-white/50 border border-white/60 shadow-sm hover:shadow-md transition-all group backdrop-blur-sm">
                 <div className="w-12 h-12 rounded-2xl bg-slate-100 text-slate-600 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                   <BarChart3 className="w-6 h-6" />
                 </div>
@@ -141,7 +143,7 @@ export default function Home() {
 
              {/* Card 4 */}
              <FadeIn delay={0.4}>
-              <div className="h-full p-8 rounded-3xl bg-white/60 border border-white/80 shadow-sm hover:shadow-md transition-all group">
+              <div className="h-full p-8 rounded-3xl bg-white/50 border border-white/60 shadow-sm hover:shadow-md transition-all group backdrop-blur-sm">
                 <div className="w-12 h-12 rounded-2xl bg-orange-100 text-orange-600 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                   <Target className="w-6 h-6" />
                 </div>
@@ -172,7 +174,7 @@ export default function Home() {
                     <div className="flex items-end gap-1 h-24 w-48">
                       <div className="w-1/5 bg-white/20 h-[40%] rounded-t-sm"></div>
                       <div className="w-1/5 bg-white/30 h-[60%] rounded-t-sm"></div>
-                      <div className="w-1/5 bg-orange-400 h-[85%] rounded-t-sm animate-pulse"></div>
+                      <div className="w-1/5 bg-orange-500 h-[85%] rounded-t-sm animate-pulse"></div>
                       <div className="w-1/5 bg-white/30 h-[55%] rounded-t-sm"></div>
                       <div className="w-1/5 bg-white/20 h-[45%] rounded-t-sm"></div>
                     </div>
@@ -185,7 +187,7 @@ export default function Home() {
       </section>
 
       {/* Process Section */}
-      <section id="process" className="py-32 px-4 bg-white">
+      <section id="process" className="py-32 px-4 bg-white relative z-10">
         <div className="max-w-4xl mx-auto">
           <FadeIn>
             <div className="text-center mb-20">
@@ -255,7 +257,7 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer className="py-20 bg-[#1a1a1a] text-white">
+      <footer className="py-20 bg-[#1a1a1a] text-white relative z-10">
         <div className="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-8">
           <div className="text-3xl font-display font-bold tracking-tighter">Panelo</div>
           <div className="text-slate-400 text-sm">© 2025 Panelo Inc. All rights reserved.</div>
