@@ -45,6 +45,8 @@ export default function Home() {
         <div className="absolute top-[18%] -right-[5%] w-[50%] h-[15%] rounded-full bg-[#94a3b8] blur-[150px] opacity-50 mix-blend-multiply"></div>
         {/* Stronger Orange Hint - Center */}
         <div className="absolute top-[20%] left-[30%] w-[40%] h-[10%] rounded-full bg-[#fb923c] blur-[150px] opacity-30 mix-blend-multiply"></div>
+        {/* New Pink Blob for Consumers Decide - Right side alongside grey */}
+        <div className="absolute top-[24%] right-[0%] w-[45%] h-[12%] rounded-full bg-[#f472b6] blur-[140px] opacity-45 mix-blend-multiply"></div>
 
         {/* --- SECTION 3: PROCESS (Rich Tones + New Orange Blob) --- */}
         {/* Richer Grey/Blue - Spanning width */}
