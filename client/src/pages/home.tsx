@@ -212,20 +212,20 @@ export default function Home() {
             <div className="absolute left-[27px] md:left-1/2 top-0 bottom-0 w-0.5 bg-slate-100 -z-10 md:-translate-x-1/2"></div>
 
             {/* Step 1 */}
-            <div className="flex flex-col md:flex-row gap-8 md:gap-16 items-center group">
-              <div className="flex-1 order-2 md:order-1">
+            <div className="flex flex-col md:flex-row gap-8 md:gap-16 items-start md:items-center group">
+              <div className="flex-1 order-2 md:order-1 pl-16 md:pl-0">
                 <FadeIn delay={0.1} className="md:ml-auto md:w-fit">
                   <h3 className="text-2xl font-semibold mb-2">Upload Prospective Designs</h3>
-                  <ul className="space-y-2 text-slate-600">
-                     <li className="flex items-center gap-2">
+                  <ul className="space-y-2 text-slate-600 md:flex md:flex-col md:items-end">
+                     <li className="flex items-center gap-2 md:flex-row-reverse">
                        <div className="w-1.5 h-1.5 rounded-full bg-orange-400 flex-shrink-0"></div>
                        <span>Bring your designs, concepts, or samples into one place</span>
                      </li>
-                     <li className="flex items-center gap-2">
+                     <li className="flex items-center gap-2 md:flex-row-reverse">
                        <div className="w-1.5 h-1.5 rounded-full bg-orange-400 flex-shrink-0"></div>
                        <span>Panelo auto-detects styles, variants, and key attributes</span>
                      </li>
-                     <li className="flex items-center gap-2">
+                     <li className="flex items-center gap-2 md:flex-row-reverse">
                        <div className="w-1.5 h-1.5 rounded-full bg-orange-400 flex-shrink-0"></div>
                        <span>Everything is instantly ready for community testing</span>
                      </li>
@@ -241,14 +241,14 @@ export default function Home() {
             </div>
 
             {/* Step 2 */}
-            <div className="flex flex-col md:flex-row gap-8 md:gap-16 items-center group">
+            <div className="flex flex-col md:flex-row gap-8 md:gap-16 items-start md:items-center group">
               <div className="flex-1 hidden md:block order-1"></div>
               
               <div className="relative z-10 order-1 md:order-2 flex-shrink-0">
                 <div className="w-14 h-14 rounded-full bg-white border-4 border-blue-100 text-blue-500 font-bold text-xl flex items-center justify-center shadow-sm group-hover:scale-110 group-hover:border-blue-200 transition-all duration-300">2</div>
               </div>
               
-              <div className="flex-1 order-2 md:order-3">
+              <div className="flex-1 order-2 md:order-3 pl-16 md:pl-0">
                  <FadeIn delay={0.2}>
                   <h3 className="text-2xl font-semibold mb-2">Collect Community Feedback</h3>
                   <ul className="space-y-2 text-slate-600">
@@ -270,20 +270,20 @@ export default function Home() {
             </div>
 
             {/* Step 3 */}
-            <div className="flex flex-col md:flex-row gap-8 md:gap-16 items-center group">
-              <div className="flex-1 order-2 md:order-1">
+            <div className="flex flex-col md:flex-row gap-8 md:gap-16 items-start md:items-center group">
+              <div className="flex-1 order-2 md:order-1 pl-16 md:pl-0">
                 <FadeIn delay={0.3} className="md:ml-auto md:w-fit">
                   <h3 className="text-2xl font-semibold mb-2">Predict Demand</h3>
-                  <ul className="space-y-2 text-slate-600">
-                     <li className="flex items-center gap-2">
+                  <ul className="space-y-2 text-slate-600 md:flex md:flex-col md:items-end">
+                     <li className="flex items-center gap-2 md:flex-row-reverse">
                        <div className="w-1.5 h-1.5 rounded-full bg-slate-400 flex-shrink-0"></div>
                        <span>See which concepts will win before you commit</span>
                      </li>
-                     <li className="flex items-center gap-2">
+                     <li className="flex items-center gap-2 md:flex-row-reverse">
                        <div className="w-1.5 h-1.5 rounded-full bg-slate-400 flex-shrink-0"></div>
                        <span>Forecast demand by customer type</span>
                      </li>
-                     <li className="flex items-center gap-2">
+                     <li className="flex items-center gap-2 md:flex-row-reverse">
                        <div className="w-1.5 h-1.5 rounded-full bg-slate-400 flex-shrink-0"></div>
                        <span>Get clear recommendations for buy depth and assortment mix</span>
                      </li>
