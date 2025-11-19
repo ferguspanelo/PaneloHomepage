@@ -36,9 +36,10 @@ export default function Home() {
          <div className="absolute top-[40%] left-[10%] w-[60%] h-[30%] rounded-full bg-[#fb923c] blur-[150px] opacity-20 mix-blend-multiply animate-blob" style={{ animationDelay: '3s' }}></div>
          <div className="absolute top-[60%] right-[20%] w-[70%] h-[30%] rounded-full bg-[#60a5fa] blur-[150px] opacity-20 mix-blend-multiply animate-blob" style={{ animationDelay: '5s' }}></div>
          
-         {/* Footer area blobs */}
-         <div className="absolute bottom-[5%] left-[20%] w-[60%] h-[20%] rounded-full bg-[#fb923c] blur-[130px] opacity-30 mix-blend-multiply animate-blob" style={{ animationDelay: '1s' }}></div>
-         <div className="absolute bottom-[-5%] right-[10%] w-[70%] h-[25%] rounded-full bg-[#60a5fa] blur-[130px] opacity-30 mix-blend-multiply animate-blob" style={{ animationDelay: '4s' }}></div>
+         {/* Footer area blobs - Now shifting back to Orange */}
+         <div className="absolute bottom-[5%] left-[20%] w-[60%] h-[20%] rounded-full bg-[#fb923c] blur-[130px] opacity-40 mix-blend-multiply animate-blob" style={{ animationDelay: '1s' }}></div>
+         <div className="absolute bottom-[-5%] right-[10%] w-[70%] h-[25%] rounded-full bg-[#ea580c] blur-[130px] opacity-40 mix-blend-multiply animate-blob" style={{ animationDelay: '4s' }}></div>
+         <div className="absolute bottom-[-10%] left-[-10%] w-[50%] h-[30%] rounded-full bg-[#c2410c] blur-[150px] opacity-30 mix-blend-multiply animate-blob" style={{ animationDelay: '2s' }}></div>
       </div>
 
       {/* Navigation */}
@@ -193,7 +194,7 @@ export default function Home() {
       </section>
 
       {/* Process Section */}
-      <section id="process" className="py-32 px-4 relative z-10">
+      <section id="process" className="py-32 px-4 bg-white relative z-10">
         <div className="max-w-4xl mx-auto">
           <FadeIn>
             <div className="text-center mb-20">
