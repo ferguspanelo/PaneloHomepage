@@ -33,10 +33,10 @@ export default function Home() {
       <section className="relative min-h-screen flex flex-col items-center justify-center text-center px-4 py-20">
         {/* Aurora Gradient Background */}
         <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
-          <div className="absolute -top-[20%] -left-[10%] w-[70%] h-[70%] rounded-full bg-[#ff9a9e] blur-[120px] opacity-60 mix-blend-multiply animate-pulse" style={{ animationDuration: '8s' }}></div>
-          <div className="absolute top-[10%] -right-[10%] w-[60%] h-[60%] rounded-full bg-[#fecfef] blur-[100px] opacity-60 mix-blend-multiply animate-pulse" style={{ animationDuration: '10s', animationDelay: '1s' }}></div>
-          <div className="absolute -bottom-[20%] left-[20%] w-[80%] h-[80%] rounded-full bg-[#a1c4fd] blur-[120px] opacity-40 mix-blend-multiply animate-pulse" style={{ animationDuration: '12s', animationDelay: '2s' }}></div>
-          <div className="absolute bottom-[10%] right-[20%] w-[50%] h-[50%] rounded-full bg-[#f6d365] blur-[100px] opacity-50 mix-blend-multiply animate-pulse" style={{ animationDuration: '9s', animationDelay: '0.5s' }}></div>
+          <div className="absolute -top-[20%] -left-[10%] w-[70%] h-[70%] rounded-full bg-[#ff9a9e] blur-[120px] opacity-60 mix-blend-multiply animate-blob" style={{ animationDelay: '0s' }}></div>
+          <div className="absolute top-[10%] -right-[10%] w-[60%] h-[60%] rounded-full bg-[#fecfef] blur-[100px] opacity-60 mix-blend-multiply animate-blob" style={{ animationDelay: '2s' }}></div>
+          <div className="absolute -bottom-[20%] left-[20%] w-[80%] h-[80%] rounded-full bg-[#a1c4fd] blur-[120px] opacity-40 mix-blend-multiply animate-blob" style={{ animationDelay: '4s' }}></div>
+          <div className="absolute bottom-[10%] right-[20%] w-[50%] h-[50%] rounded-full bg-[#f6d365] blur-[100px] opacity-50 mix-blend-multiply animate-blob" style={{ animationDelay: '0.5s' }}></div>
         </div>
 
         <div className="relative z-10 max-w-5xl mx-auto space-y-8">
