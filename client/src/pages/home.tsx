@@ -33,10 +33,17 @@ export default function Home() {
       <section className="relative min-h-screen flex flex-col items-center justify-center text-center px-4 py-20">
         {/* Aurora Gradient Background */}
         <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
-          <div className="absolute -top-[20%] -left-[10%] w-[70%] h-[70%] rounded-full bg-[#ff9a9e] blur-[120px] opacity-60 mix-blend-multiply animate-blob" style={{ animationDelay: '0s' }}></div>
-          <div className="absolute top-[10%] -right-[10%] w-[60%] h-[60%] rounded-full bg-[#fecfef] blur-[100px] opacity-60 mix-blend-multiply animate-blob" style={{ animationDelay: '2s' }}></div>
-          <div className="absolute -bottom-[20%] left-[20%] w-[80%] h-[80%] rounded-full bg-[#a1c4fd] blur-[120px] opacity-40 mix-blend-multiply animate-blob" style={{ animationDelay: '4s' }}></div>
-          <div className="absolute bottom-[10%] right-[20%] w-[50%] h-[50%] rounded-full bg-[#f6d365] blur-[100px] opacity-50 mix-blend-multiply animate-blob" style={{ animationDelay: '0.5s' }}></div>
+          {/* Orange Blob */}
+          <div className="absolute -top-[20%] -left-[10%] w-[70%] h-[70%] rounded-full bg-[#fb923c] blur-[120px] opacity-50 mix-blend-multiply animate-blob" style={{ animationDelay: '0s' }}></div>
+          
+          {/* Grey/Blue Blob */}
+          <div className="absolute top-[10%] -right-[10%] w-[60%] h-[60%] rounded-full bg-[#94a3b8] blur-[100px] opacity-60 mix-blend-multiply animate-blob" style={{ animationDelay: '2s' }}></div>
+          
+          {/* Blue Blob */}
+          <div className="absolute -bottom-[20%] left-[20%] w-[80%] h-[80%] rounded-full bg-[#60a5fa] blur-[120px] opacity-40 mix-blend-multiply animate-blob" style={{ animationDelay: '4s' }}></div>
+          
+          {/* Light Grey Blob */}
+          <div className="absolute bottom-[10%] right-[20%] w-[50%] h-[50%] rounded-full bg-[#cbd5e1] blur-[100px] opacity-50 mix-blend-multiply animate-blob" style={{ animationDelay: '0.5s' }}></div>
         </div>
 
         <div className="relative z-10 max-w-5xl mx-auto space-y-8">
@@ -52,7 +59,7 @@ export default function Home() {
           <FadeIn delay={0.3}>
             <h1 className="text-6xl md:text-8xl font-display font-semibold tracking-tight leading-[0.95] text-[#1a1a1a]">
               Identify your winners early. <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 via-pink-500 to-purple-600">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 via-blue-500 to-slate-500">
                 Launch smarter.
               </span>
             </h1>
@@ -109,7 +116,7 @@ export default function Home() {
             {/* Card 2 */}
             <FadeIn delay={0.2}>
               <div className="h-full p-8 rounded-3xl bg-white/60 border border-white/80 shadow-sm hover:shadow-md transition-all group">
-                <div className="w-12 h-12 rounded-2xl bg-pink-100 text-pink-600 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                <div className="w-12 h-12 rounded-2xl bg-blue-100 text-blue-600 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                   <Users className="w-6 h-6" />
                 </div>
                 <h3 className="text-2xl font-display font-semibold mb-3">Consumers Decide</h3>
@@ -122,7 +129,7 @@ export default function Home() {
             {/* Card 3 */}
             <FadeIn delay={0.3}>
               <div className="h-full p-8 rounded-3xl bg-white/60 border border-white/80 shadow-sm hover:shadow-md transition-all group">
-                <div className="w-12 h-12 rounded-2xl bg-purple-100 text-purple-600 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                <div className="w-12 h-12 rounded-2xl bg-slate-100 text-slate-600 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                   <BarChart3 className="w-6 h-6" />
                 </div>
                 <h3 className="text-2xl font-display font-semibold mb-3">Product Intelligence</h3>
@@ -135,7 +142,7 @@ export default function Home() {
              {/* Card 4 */}
              <FadeIn delay={0.4}>
               <div className="h-full p-8 rounded-3xl bg-white/60 border border-white/80 shadow-sm hover:shadow-md transition-all group">
-                <div className="w-12 h-12 rounded-2xl bg-blue-100 text-blue-600 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                <div className="w-12 h-12 rounded-2xl bg-orange-100 text-orange-600 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                   <Target className="w-6 h-6" />
                 </div>
                 <h3 className="text-2xl font-display font-semibold mb-3">Avoid Costly Mistakes</h3>
@@ -212,16 +219,16 @@ export default function Home() {
               <div className="flex-1 hidden md:block order-1"></div>
               
               <div className="relative z-10 order-1 md:order-2 flex-shrink-0">
-                <div className="w-14 h-14 rounded-full bg-white border-4 border-pink-100 text-pink-500 font-bold text-xl flex items-center justify-center shadow-sm group-hover:scale-110 group-hover:border-pink-200 transition-all duration-300">2</div>
+                <div className="w-14 h-14 rounded-full bg-white border-4 border-blue-100 text-blue-500 font-bold text-xl flex items-center justify-center shadow-sm group-hover:scale-110 group-hover:border-blue-200 transition-all duration-300">2</div>
               </div>
               
               <div className="flex-1 order-2 md:order-3">
                  <FadeIn delay={0.2}>
                   <h3 className="text-2xl font-semibold mb-2">Collect Community Feedback</h3>
                   <ul className="space-y-2 text-slate-600">
-                    <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-pink-400"></div>Product Ranking</li>
-                    <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-pink-400"></div>Attribute Level Insights</li>
-                    <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-pink-400"></div>Preference Mapping</li>
+                    <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-blue-400"></div>Product Ranking</li>
+                    <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-blue-400"></div>Attribute Level Insights</li>
+                    <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-blue-400"></div>Preference Mapping</li>
                   </ul>
                 </FadeIn>
               </div>
@@ -237,7 +244,7 @@ export default function Home() {
               </div>
               
               <div className="relative z-10 order-1 md:order-2 flex-shrink-0">
-                <div className="w-14 h-14 rounded-full bg-white border-4 border-purple-100 text-purple-500 font-bold text-xl flex items-center justify-center shadow-sm group-hover:scale-110 group-hover:border-purple-200 transition-all duration-300">3</div>
+                <div className="w-14 h-14 rounded-full bg-white border-4 border-slate-200 text-slate-500 font-bold text-xl flex items-center justify-center shadow-sm group-hover:scale-110 group-hover:border-slate-300 transition-all duration-300">3</div>
               </div>
               
               <div className="flex-1 order-3 hidden md:block"></div>
