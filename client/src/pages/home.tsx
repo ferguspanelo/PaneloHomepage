@@ -18,8 +18,8 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-white text-[#1a1a1a] selection:bg-[#ffaa4c] selection:text-white overflow-hidden relative">
       
-      {/* Continuous Aurora Background - Spanning full page including footer */}
-      <div className="absolute top-0 left-0 right-0 h-full z-0 overflow-hidden pointer-events-none">
+      {/* Continuous Aurora Background - Spanning Hero & Features */}
+      <div className="absolute top-0 left-0 right-0 h-[400vh] z-0 overflow-hidden pointer-events-none">
         {/* Dark Orange - Top Left (Darker and slightly more opaque) */}
         <div className="absolute -top-[5%] -left-[10%] w-[90%] h-[30%] rounded-full bg-[#c2410c] blur-[130px] opacity-50 mix-blend-multiply animate-blob" style={{ animationDelay: '0s' }}></div>
         
@@ -35,11 +35,9 @@ export default function Home() {
         {/* Extended background elements for the longer vertical section */}
          <div className="absolute top-[40%] left-[10%] w-[60%] h-[30%] rounded-full bg-[#fb923c] blur-[150px] opacity-20 mix-blend-multiply animate-blob" style={{ animationDelay: '3s' }}></div>
          <div className="absolute top-[60%] right-[20%] w-[70%] h-[30%] rounded-full bg-[#60a5fa] blur-[150px] opacity-20 mix-blend-multiply animate-blob" style={{ animationDelay: '5s' }}></div>
-         
-         {/* Footer area blobs - Now shifting back to Orange */}
-         <div className="absolute bottom-[5%] left-[20%] w-[60%] h-[20%] rounded-full bg-[#fb923c] blur-[130px] opacity-40 mix-blend-multiply animate-blob" style={{ animationDelay: '1s' }}></div>
-         <div className="absolute bottom-[-5%] right-[10%] w-[70%] h-[25%] rounded-full bg-[#ea580c] blur-[130px] opacity-40 mix-blend-multiply animate-blob" style={{ animationDelay: '4s' }}></div>
-         <div className="absolute bottom-[-10%] left-[-10%] w-[50%] h-[30%] rounded-full bg-[#c2410c] blur-[150px] opacity-30 mix-blend-multiply animate-blob" style={{ animationDelay: '2s' }}></div>
+
+        {/* Fade to white at the bottom to remove harsh lines */}
+        <div className="absolute bottom-0 left-0 right-0 h-[30vh] bg-gradient-to-t from-white via-white/80 to-transparent"></div>
       </div>
 
       {/* Navigation */}
@@ -205,7 +203,7 @@ export default function Home() {
 
           <div className="space-y-16 relative">
             {/* Connector Line */}
-            <div className="absolute left-[27px] md:left-1/2 top-0 bottom-0 w-0.5 bg-slate-200 -z-10 md:-translate-x-1/2"></div>
+            <div className="absolute left-[27px] md:left-1/2 top-0 bottom-0 w-0.5 bg-slate-100 -z-10 md:-translate-x-1/2"></div>
 
             {/* Step 1 */}
             <div className="flex flex-col md:flex-row gap-8 md:gap-16 items-center group">
@@ -264,10 +262,10 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer className="py-20 relative z-10 bg-transparent border-t border-white/20">
+      <footer className="py-20 bg-[#1a1a1a] text-white relative z-10">
         <div className="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-8">
-          <div className="text-3xl font-display font-bold tracking-tighter text-[#1a1a1a]">Panelo</div>
-          <div className="text-slate-600 text-sm">© 2025 Panelo Inc. All rights reserved.</div>
+          <div className="text-3xl font-display font-bold tracking-tighter">Panelo</div>
+          <div className="text-slate-400 text-sm">© 2025 Panelo Inc. All rights reserved.</div>
         </div>
       </footer>
     </div>
