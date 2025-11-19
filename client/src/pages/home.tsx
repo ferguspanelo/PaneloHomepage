@@ -483,17 +483,17 @@ export default function Home() {
 
           {/* Enterprise Banner */}
           <FadeIn delay={0.4}>
-            <div className="rounded-3xl bg-[#1e293b] p-8 md:p-12 text-white flex flex-col md:flex-row items-center justify-between gap-8 shadow-2xl overflow-hidden relative">
-              <div className="absolute top-0 right-0 w-64 h-64 bg-blue-500/20 rounded-full blur-3xl -mr-16 -mt-16"></div>
-              <div className="absolute bottom-0 left-0 w-64 h-64 bg-orange-500/10 rounded-full blur-3xl -ml-16 -mb-16"></div>
+            <div className="rounded-3xl bg-slate-900/60 backdrop-blur-xl border border-white/10 p-8 md:p-12 text-white flex flex-col md:flex-row items-center justify-between gap-8 shadow-2xl overflow-hidden relative">
+              <div className="absolute top-0 right-0 w-64 h-64 bg-blue-500/30 rounded-full blur-3xl -mr-16 -mt-16"></div>
+              <div className="absolute bottom-0 left-0 w-64 h-64 bg-orange-500/20 rounded-full blur-3xl -ml-16 -mb-16"></div>
               
               <div className="max-w-2xl relative z-10">
                 <h3 className="text-2xl font-bold mb-3">Need Enterprise Support?</h3>
-                <p className="text-slate-300 leading-relaxed">
+                <p className="text-slate-200 leading-relaxed">
                   Looking for custom solutions, dedicated support, or higher participant limits? Our enterprise plan is tailored to your specific needs with advanced features and personalized onboarding.
                 </p>
               </div>
-              <button className="px-8 py-4 rounded-xl bg-gradient-to-r from-orange-500 to-blue-500 font-bold text-white hover:opacity-90 transition-opacity whitespace-nowrap shadow-lg relative z-10">
+              <button className="px-8 py-4 rounded-xl bg-gradient-to-r from-orange-500 to-blue-500 font-bold text-white hover:opacity-90 transition-opacity whitespace-nowrap shadow-lg relative z-10 border border-white/10">
                 Contact Sales
               </button>
             </div>
