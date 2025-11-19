@@ -420,12 +420,12 @@ export default function Home() {
                 <div className="mb-8 text-center">
                   <h3 className="text-xl font-bold mb-2">Freemium</h3>
                   <p className="text-slate-500 text-sm mb-6">Try Panelo at no cost</p>
-                  <div className="text-4xl font-display font-medium">$0<span className="text-lg text-slate-400 font-sans">/month</span></div>
+                  <div className="text-4xl font-display font-medium text-slate-900">$0<span className="text-lg text-slate-400 font-sans">/month</span></div>
                 </div>
                 <div className="space-y-4 mb-8 flex-grow">
                   {["1 survey per month", "20 participants", "10 products max", "Product ranking only", "Foundational Analytics"].map((item, i) => (
                     <div key={i} className="flex items-center gap-3">
-                      <CheckCircle2 className="w-5 h-5 text-green-500 flex-shrink-0" />
+                      <CheckCircle2 className="w-5 h-5 text-orange-500 flex-shrink-0" />
                       <span className="text-sm text-slate-600">{item}</span>
                     </div>
                   ))}
@@ -438,21 +438,21 @@ export default function Home() {
 
             {/* Starter */}
             <FadeIn delay={0.2}>
-              <div className="bg-white rounded-3xl p-8 border-2 border-blue-500 shadow-xl h-full flex flex-col relative transform md:-translate-y-4">
+              <div className="bg-white rounded-3xl p-8 border-2 border-orange-500 shadow-xl h-full flex flex-col relative transform md:-translate-y-4">
                 <div className="mb-8 text-center">
                   <h3 className="text-xl font-bold mb-2">Starter</h3>
                   <p className="text-slate-500 text-sm mb-6">Perfect for small teams</p>
-                  <div className="text-4xl font-display font-medium">$299<span className="text-lg text-slate-400 font-sans">/month</span></div>
+                  <div className="text-4xl font-display font-medium text-orange-600">$299<span className="text-lg text-slate-400 font-sans">/month</span></div>
                 </div>
                 <div className="space-y-4 mb-8 flex-grow">
                   {["5 surveys per month", "100 participants", "40 products max", "All survey types", "AI insights & analytics"].map((item, i) => (
                     <div key={i} className="flex items-center gap-3">
-                      <CheckCircle2 className="w-5 h-5 text-green-500 flex-shrink-0" />
+                      <CheckCircle2 className="w-5 h-5 text-orange-500 flex-shrink-0" />
                       <span className="text-sm text-slate-600">{item}</span>
                     </div>
                   ))}
                 </div>
-                <button className="w-full py-3 rounded-xl bg-blue-600 text-white font-medium hover:bg-blue-700 transition-colors shadow-lg shadow-blue-200">
+                <button className="w-full py-3 rounded-xl bg-gradient-to-r from-orange-600 to-orange-500 text-white font-medium hover:opacity-90 transition-opacity shadow-lg shadow-orange-200">
                   Get Started
                 </button>
               </div>
@@ -464,17 +464,17 @@ export default function Home() {
                 <div className="mb-8 text-center">
                   <h3 className="text-xl font-bold mb-2">Professional</h3>
                   <p className="text-slate-500 text-sm mb-6">For growing businesses</p>
-                  <div className="text-4xl font-display font-medium">$999<span className="text-lg text-slate-400 font-sans">/month</span></div>
+                  <div className="text-4xl font-display font-medium text-blue-600">$999<span className="text-lg text-slate-400 font-sans">/month</span></div>
                 </div>
                 <div className="space-y-4 mb-8 flex-grow">
                   {["Unlimited surveys", "Unlimited participants", "Unlimited products", "Advanced AI analytics", "Priority support"].map((item, i) => (
                     <div key={i} className="flex items-center gap-3">
-                      <CheckCircle2 className="w-5 h-5 text-green-500 flex-shrink-0" />
+                      <CheckCircle2 className="w-5 h-5 text-blue-500 flex-shrink-0" />
                       <span className="text-sm text-slate-600">{item}</span>
                     </div>
                   ))}
                 </div>
-                <button className="w-full py-3 rounded-xl border border-green-200 text-green-700 font-medium hover:bg-green-50 transition-colors">
+                <button className="w-full py-3 rounded-xl border border-blue-200 text-blue-700 font-medium hover:bg-blue-50 transition-colors">
                   Get Started
                 </button>
               </div>
@@ -483,14 +483,17 @@ export default function Home() {
 
           {/* Enterprise Banner */}
           <FadeIn delay={0.4}>
-            <div className="rounded-3xl bg-[#1a1a2e] p-8 md:p-12 text-white flex flex-col md:flex-row items-center justify-between gap-8 shadow-2xl">
-              <div className="max-w-2xl">
+            <div className="rounded-3xl bg-[#1e293b] p-8 md:p-12 text-white flex flex-col md:flex-row items-center justify-between gap-8 shadow-2xl overflow-hidden relative">
+              <div className="absolute top-0 right-0 w-64 h-64 bg-blue-500/20 rounded-full blur-3xl -mr-16 -mt-16"></div>
+              <div className="absolute bottom-0 left-0 w-64 h-64 bg-orange-500/10 rounded-full blur-3xl -ml-16 -mb-16"></div>
+              
+              <div className="max-w-2xl relative z-10">
                 <h3 className="text-2xl font-bold mb-3">Need Enterprise Support?</h3>
                 <p className="text-slate-300 leading-relaxed">
                   Looking for custom solutions, dedicated support, or higher participant limits? Our enterprise plan is tailored to your specific needs with advanced features and personalized onboarding.
                 </p>
               </div>
-              <button className="px-8 py-4 rounded-xl bg-gradient-to-r from-purple-500 to-pink-500 font-bold text-white hover:opacity-90 transition-opacity whitespace-nowrap shadow-lg">
+              <button className="px-8 py-4 rounded-xl bg-gradient-to-r from-orange-500 to-blue-500 font-bold text-white hover:opacity-90 transition-opacity whitespace-nowrap shadow-lg relative z-10">
                 Contact Sales
               </button>
             </div>
