@@ -24,26 +24,48 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-white text-[#1a1a1a] selection:bg-[#ffaa4c] selection:text-white overflow-hidden relative">
       
-      {/* Continuous Aurora Background - Spanning Hero & Features */}
-      <div className="absolute top-0 left-0 right-0 h-[600vh] z-0 overflow-hidden pointer-events-none">
-        {/* Dark Orange - Top Left (Darker and slightly more opaque) */}
-        <div className="absolute -top-[2%] -left-[10%] w-[90%] h-[20%] rounded-full bg-[#c2410c] blur-[130px] opacity-50 mix-blend-multiply animate-blob" style={{ animationDelay: '0s' }}></div>
+      {/* Continuous Aurora Background */}
+      <div className="absolute top-0 left-0 right-0 h-full min-h-[800vh] z-0 overflow-hidden pointer-events-none">
         
-        {/* Light Orange - Top Right (Reduced opacity) */}
-        <div className="absolute top-[1%] -right-[10%] w-[80%] h-[25%] rounded-full bg-[#fb923c] blur-[110px] opacity-30 mix-blend-multiply animate-blob" style={{ animationDelay: '2s' }}></div>
-        
-        {/* Blue - Moved further up and increased opacity for more presence */}
-        <div className="absolute top-[5%] right-[10%] w-[70%] h-[25%] rounded-full bg-[#60a5fa] blur-[130px] opacity-60 mix-blend-multiply animate-blob" style={{ animationDelay: '4s' }}></div>
-        
-        {/* Grey - Mid/Bottom Right */}
-        <div className="absolute top-[10%] -right-[5%] w-[50%] h-[20%] rounded-full bg-[#94a3b8] blur-[100px] opacity-40 mix-blend-multiply animate-blob" style={{ animationDelay: '1s' }}></div>
+        {/* --- SECTION 1: HERO (Vibrant) --- */}
+        {/* Dark Orange - Top Left */}
+        <div className="absolute top-[-2%] -left-[10%] w-[90%] h-[10%] rounded-full bg-[#c2410c] blur-[130px] opacity-50 mix-blend-multiply animate-blob"></div>
+        {/* Light Orange - Top Right */}
+        <div className="absolute top-[1%] -right-[10%] w-[80%] h-[12%] rounded-full bg-[#fb923c] blur-[110px] opacity-30 mix-blend-multiply animate-blob animation-delay-2000"></div>
+        {/* Blue - Top Right/Center */}
+        <div className="absolute top-[3%] right-[10%] w-[70%] h-[12%] rounded-full bg-[#60a5fa] blur-[130px] opacity-60 mix-blend-multiply animate-blob animation-delay-4000"></div>
 
-        {/* Extended background elements for the longer vertical section */}
-         <div className="absolute top-[15%] left-[10%] w-[60%] h-[20%] rounded-full bg-[#fb923c] blur-[150px] opacity-20 mix-blend-multiply animate-blob" style={{ animationDelay: '3s' }}></div>
-         <div className="absolute top-[25%] right-[20%] w-[70%] h-[20%] rounded-full bg-[#60a5fa] blur-[150px] opacity-20 mix-blend-multiply animate-blob" style={{ animationDelay: '5s' }}></div>
+        {/* --- SECTION 2: FEATURES (Faint Blue/Grey with subtle Orange) --- */}
+        {/* Faint Blue - Left */}
+        <div className="absolute top-[15%] left-[10%] w-[60%] h-[15%] rounded-full bg-[#93c5fd] blur-[150px] opacity-30 mix-blend-multiply"></div>
+        {/* Faint Grey - Right */}
+        <div className="absolute top-[18%] -right-[5%] w-[50%] h-[15%] rounded-full bg-[#cbd5e1] blur-[150px] opacity-40 mix-blend-multiply"></div>
+        {/* Subtle Orange Hint - Center */}
+        <div className="absolute top-[20%] left-[30%] w-[40%] h-[10%] rounded-full bg-[#fed7aa] blur-[150px] opacity-20 mix-blend-multiply"></div>
 
-        {/* Fade to white at the bottom to remove harsh lines */}
-        <div className="absolute bottom-0 left-0 right-0 h-[30vh] bg-gradient-to-t from-white via-white/80 to-transparent"></div>
+        {/* --- SECTION 3: PROCESS (Cooler Tones) --- */}
+        {/* Cool Grey/Blue - Spanning width */}
+        <div className="absolute top-[35%] left-[20%] w-[80%] h-[15%] rounded-full bg-[#e2e8f0] blur-[160px] opacity-50 mix-blend-multiply"></div>
+        <div className="absolute top-[38%] right-[20%] w-[40%] h-[12%] rounded-full bg-[#bfdbfe] blur-[140px] opacity-30 mix-blend-multiply"></div>
+
+        {/* --- SECTION 4: METHODOLOGIES & WHY PANELO (Clean, Faint) --- */}
+        {/* Very Faint Blue - Top Left of this section */}
+        <div className="absolute top-[50%] -left-[10%] w-[60%] h-[15%] rounded-full bg-[#dbeafe] blur-[150px] opacity-30 mix-blend-multiply"></div>
+        {/* Very Faint Grey - Bottom Right of this section */}
+        <div className="absolute top-[55%] -right-[10%] w-[60%] h-[15%] rounded-full bg-[#f1f5f9] blur-[150px] opacity-40 mix-blend-multiply"></div>
+
+        {/* --- SECTION 5: PRICING & FAQ (Warming up slightly) --- */}
+        {/* Faint Orange returning - Left */}
+        <div className="absolute top-[70%] -left-[5%] w-[40%] h-[12%] rounded-full bg-[#ffedd5] blur-[140px] opacity-30 mix-blend-multiply"></div>
+        {/* Blue/Grey - Right */}
+        <div className="absolute top-[75%] right-[10%] w-[50%] h-[12%] rounded-full bg-[#e2e8f0] blur-[140px] opacity-40 mix-blend-multiply"></div>
+
+        {/* --- SECTION 6: FOOTER (Stronger Orange Return) --- */}
+        {/* Stronger Orange - Bottom Center */}
+        <div className="absolute top-[90%] left-[20%] w-[60%] h-[10%] rounded-full bg-[#fb923c] blur-[150px] opacity-40 mix-blend-multiply"></div>
+        {/* Supporting Blue - Bottom Right */}
+        <div className="absolute top-[92%] -right-[10%] w-[40%] h-[8%] rounded-full bg-[#60a5fa] blur-[150px] opacity-20 mix-blend-multiply"></div>
+
       </div>
 
       {/* Navigation */}
@@ -104,7 +126,7 @@ export default function Home() {
       </section>
 
       {/* Features Section - Vertical ZigZag */}
-      <section id="features" className="py-32 px-4 relative z-10">
+      <section id="features" className="py-32 px-4 relative z-10 bg-transparent">
         <div className="max-w-6xl mx-auto">
           <FadeIn>
             <h2 className="text-4xl md:text-5xl font-display font-medium text-center mb-32 text-slate-900">
@@ -123,7 +145,7 @@ export default function Home() {
                     <p>But which ones will resonate most? Don't guess.</p>
                   </div>
                 </div>
-                <div className="flex-1 w-full aspect-video rounded-3xl bg-slate-100/50 border border-white/50 shadow-sm backdrop-blur-sm flex items-center justify-center">
+                <div className="flex-1 w-full aspect-video rounded-3xl bg-white/40 border border-white/50 shadow-sm backdrop-blur-md flex items-center justify-center">
                   <span className="text-slate-400 font-light">Image / Video Placeholder</span>
                 </div>
               </div>
@@ -132,14 +154,14 @@ export default function Home() {
             {/* Item 2: Consumers Decide */}
             <FadeIn>
               <div className="flex flex-col md:flex-row-reverse items-center gap-12 md:gap-24">
-                <div className="flex-1 space-y-6 text-left md:text-left"> {/* Kept text align left for consistency even on right side */}
+                <div className="flex-1 space-y-6 text-left md:text-left">
                   <h3 className="text-3xl md:text-4xl font-display font-normal text-[#1a1a1a]">Consumers Decide</h3>
                   <div className="space-y-4 text-lg text-slate-600 font-light leading-relaxed">
                     <p>Invite your audience in to embed insights earlier</p>
                     <p>Optimize your success by letting consumers identify the winners</p>
                   </div>
                 </div>
-                <div className="flex-1 w-full aspect-video rounded-3xl bg-slate-100/50 border border-white/50 shadow-sm backdrop-blur-sm flex items-center justify-center">
+                <div className="flex-1 w-full aspect-video rounded-3xl bg-white/40 border border-white/50 shadow-sm backdrop-blur-md flex items-center justify-center">
                   <span className="text-slate-400 font-light">Image / Video Placeholder</span>
                 </div>
               </div>
@@ -155,7 +177,7 @@ export default function Home() {
                     <p>Launch the right products in the right quantities.</p>
                   </div>
                 </div>
-                <div className="flex-1 w-full aspect-video rounded-3xl bg-slate-100/50 border border-white/50 shadow-sm backdrop-blur-sm flex items-center justify-center">
+                <div className="flex-1 w-full aspect-video rounded-3xl bg-white/40 border border-white/50 shadow-sm backdrop-blur-md flex items-center justify-center">
                   <span className="text-slate-400 font-light">Image / Video Placeholder</span>
                 </div>
               </div>
@@ -171,7 +193,7 @@ export default function Home() {
                      <p>Maximize performance and ensure long-term profitability.</p>
                   </div>
                 </div>
-                <div className="flex-1 w-full aspect-video rounded-3xl bg-slate-100/50 border border-white/50 shadow-sm backdrop-blur-sm flex items-center justify-center">
+                <div className="flex-1 w-full aspect-video rounded-3xl bg-white/40 border border-white/50 shadow-sm backdrop-blur-md flex items-center justify-center">
                   <span className="text-slate-400 font-light">Image / Video Placeholder</span>
                 </div>
               </div>
@@ -187,7 +209,7 @@ export default function Home() {
                     <p>Your community informs inventory buys. Earn rewards for participation.</p>
                   </div>
                 </div>
-                <div className="flex-1 w-full aspect-video rounded-3xl bg-slate-100/50 border border-white/50 shadow-sm backdrop-blur-sm flex items-center justify-center">
+                <div className="flex-1 w-full aspect-video rounded-3xl bg-white/40 border border-white/50 shadow-sm backdrop-blur-md flex items-center justify-center">
                   <span className="text-slate-400 font-light">Image / Video Placeholder</span>
                 </div>
               </div>
@@ -198,7 +220,7 @@ export default function Home() {
       </section>
 
       {/* Process Section */}
-      <section id="process" className="py-32 px-4 bg-white relative z-10">
+      <section id="process" className="py-32 px-4 relative z-10 bg-transparent">
         <div className="max-w-4xl mx-auto">
           <FadeIn>
             <div className="text-center mb-20">
@@ -209,7 +231,7 @@ export default function Home() {
 
           <div className="space-y-16 relative">
             {/* Connector Line */}
-            <div className="absolute left-[27px] md:left-1/2 top-0 bottom-0 w-0.5 bg-slate-100 -z-10 md:-translate-x-1/2"></div>
+            <div className="absolute left-[27px] md:left-1/2 top-0 bottom-0 w-0.5 bg-slate-200/50 -z-10 md:-translate-x-1/2"></div>
 
             {/* Step 1 */}
             <div className="flex flex-col md:flex-row gap-8 md:gap-16 items-start md:items-center group">
@@ -234,7 +256,7 @@ export default function Home() {
               </div>
               
               <div className="relative z-10 order-1 md:order-2 flex-shrink-0">
-                <div className="w-14 h-14 rounded-full bg-white border-4 border-orange-100 text-orange-500 font-bold text-xl flex items-center justify-center shadow-sm group-hover:scale-110 group-hover:border-orange-200 transition-all duration-300">1</div>
+                <div className="w-14 h-14 rounded-full bg-white/80 backdrop-blur-sm border-4 border-orange-100 text-orange-500 font-bold text-xl flex items-center justify-center shadow-sm group-hover:scale-110 group-hover:border-orange-200 transition-all duration-300">1</div>
               </div>
               
               <div className="flex-1 order-3 hidden md:block"></div>
@@ -245,7 +267,7 @@ export default function Home() {
               <div className="flex-1 hidden md:block order-1"></div>
               
               <div className="relative z-10 order-1 md:order-2 flex-shrink-0">
-                <div className="w-14 h-14 rounded-full bg-white border-4 border-blue-100 text-blue-500 font-bold text-xl flex items-center justify-center shadow-sm group-hover:scale-110 group-hover:border-blue-200 transition-all duration-300">2</div>
+                <div className="w-14 h-14 rounded-full bg-white/80 backdrop-blur-sm border-4 border-blue-100 text-blue-500 font-bold text-xl flex items-center justify-center shadow-sm group-hover:scale-110 group-hover:border-blue-200 transition-all duration-300">2</div>
               </div>
               
               <div className="flex-1 order-2 md:order-3 pl-16 md:pl-0">
@@ -292,7 +314,7 @@ export default function Home() {
               </div>
               
               <div className="relative z-10 order-1 md:order-2 flex-shrink-0">
-                <div className="w-14 h-14 rounded-full bg-white border-4 border-slate-200 text-slate-500 font-bold text-xl flex items-center justify-center shadow-sm group-hover:scale-110 group-hover:border-slate-300 transition-all duration-300">3</div>
+                <div className="w-14 h-14 rounded-full bg-white/80 backdrop-blur-sm border-4 border-slate-200 text-slate-500 font-bold text-xl flex items-center justify-center shadow-sm group-hover:scale-110 group-hover:border-slate-300 transition-all duration-300">3</div>
               </div>
               
               <div className="flex-1 order-3 hidden md:block"></div>
@@ -303,15 +325,15 @@ export default function Home() {
       </section>
 
       {/* Feedback Methodologies Section */}
-      <section className="py-32 px-4 bg-slate-50/50 relative z-10">
+      <section className="py-32 px-4 relative z-10 bg-transparent">
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-3 gap-8">
             {/* Product Ranking */}
             <FadeIn delay={0.1}>
-              <div className="bg-white rounded-3xl p-8 border border-slate-100 shadow-sm hover:shadow-md transition-all h-full flex flex-col">
+              <div className="bg-white/60 backdrop-blur-md rounded-3xl p-8 border border-white/50 shadow-sm hover:shadow-md transition-all h-full flex flex-col">
                 <div className="mb-8 flex justify-center">
                    {/* Placeholder illustration */}
-                   <div className="w-full aspect-[4/3] bg-blue-50 rounded-xl flex items-center justify-center">
+                   <div className="w-full aspect-[4/3] bg-blue-50/50 rounded-xl flex items-center justify-center">
                     <Trophy className="w-16 h-16 text-blue-200" />
                    </div>
                 </div>
@@ -321,10 +343,10 @@ export default function Home() {
                   <p>Customers compare your products in head-to-head matchups.</p>
                   <p>Our intelligent ranking system surfaces true favorites with statistical confidence so you know what deserves the shelf space and inventory investment.</p>
                 </div>
-                <div className="space-y-3 border-t border-slate-100 pt-6">
+                <div className="space-y-3 border-t border-slate-200/50 pt-6">
                   {["Relative product popularity", "Confidence-backed decisions", "Smarter buying and assortment planning"].map((item, i) => (
                     <div key={i} className="flex items-start gap-3">
-                      <div className="mt-0.5 bg-blue-100 text-blue-600 rounded-full p-0.5"><Check className="w-3 h-3" /></div>
+                      <div className="mt-0.5 bg-blue-100/50 text-blue-600 rounded-full p-0.5"><Check className="w-3 h-3" /></div>
                       <span className="text-sm text-slate-700">{item}</span>
                     </div>
                   ))}
@@ -334,10 +356,10 @@ export default function Home() {
 
             {/* Attribute Insights */}
             <FadeIn delay={0.2}>
-              <div className="bg-white rounded-3xl p-8 border border-slate-100 shadow-sm hover:shadow-md transition-all h-full flex flex-col">
+              <div className="bg-white/60 backdrop-blur-md rounded-3xl p-8 border border-white/50 shadow-sm hover:shadow-md transition-all h-full flex flex-col">
                 <div className="mb-8 flex justify-center">
                    {/* Placeholder illustration */}
-                   <div className="w-full aspect-[4/3] bg-orange-50 rounded-xl flex items-center justify-center">
+                   <div className="w-full aspect-[4/3] bg-orange-50/50 rounded-xl flex items-center justify-center">
                     <SlidersHorizontal className="w-16 h-16 text-orange-200" />
                    </div>
                 </div>
@@ -347,10 +369,10 @@ export default function Home() {
                   <p>Users give direct feedback on things like color, cut, material, and price.</p>
                   <p>It's your window into why certain products resonate giving your design and merchandising teams a creative edge.</p>
                 </div>
-                <div className="space-y-3 border-t border-slate-100 pt-6">
+                <div className="space-y-3 border-t border-slate-200/50 pt-6">
                   {["Attribute-level performance", "Custom question support", "Design validation and product improvement"].map((item, i) => (
                     <div key={i} className="flex items-start gap-3">
-                      <div className="mt-0.5 bg-orange-100 text-orange-600 rounded-full p-0.5"><Check className="w-3 h-3" /></div>
+                      <div className="mt-0.5 bg-orange-100/50 text-orange-600 rounded-full p-0.5"><Check className="w-3 h-3" /></div>
                       <span className="text-sm text-slate-700">{item}</span>
                     </div>
                   ))}
@@ -360,10 +382,10 @@ export default function Home() {
 
             {/* Preference Mapping */}
             <FadeIn delay={0.3}>
-              <div className="bg-white rounded-3xl p-8 border border-slate-100 shadow-sm hover:shadow-md transition-all h-full flex flex-col">
+              <div className="bg-white/60 backdrop-blur-md rounded-3xl p-8 border border-white/50 shadow-sm hover:shadow-md transition-all h-full flex flex-col">
                 <div className="mb-8 flex justify-center">
                    {/* Placeholder illustration */}
-                   <div className="w-full aspect-[4/3] bg-red-50 rounded-xl flex items-center justify-center">
+                   <div className="w-full aspect-[4/3] bg-red-50/50 rounded-xl flex items-center justify-center">
                     <Heart className="w-16 h-16 text-red-200" />
                    </div>
                 </div>
@@ -373,10 +395,10 @@ export default function Home() {
                   <p>Let customers pick their personal favorites from a curated set.</p>
                   <p>Analyze how products cluster together for given cohorts to reveal bundle opportunities, go-to-market themes, and merchandising strategy.</p>
                 </div>
-                <div className="space-y-3 border-t border-slate-100 pt-6">
+                <div className="space-y-3 border-t border-slate-200/50 pt-6">
                   {["Product combination analysis", "Cohort-based trends", "GTM guidance for marketing & merchandising"].map((item, i) => (
                     <div key={i} className="flex items-start gap-3">
-                      <div className="mt-0.5 bg-red-100 text-red-600 rounded-full p-0.5"><Check className="w-3 h-3" /></div>
+                      <div className="mt-0.5 bg-red-100/50 text-red-600 rounded-full p-0.5"><Check className="w-3 h-3" /></div>
                       <span className="text-sm text-slate-700">{item}</span>
                     </div>
                   ))}
@@ -388,7 +410,7 @@ export default function Home() {
       </section>
 
       {/* Why Panelo Section */}
-      <section className="py-32 px-4 bg-white relative z-10">
+      <section className="py-32 px-4 relative z-10 bg-transparent">
         <div className="max-w-6xl mx-auto">
           <FadeIn>
             <h2 className="text-4xl md:text-5xl font-display font-medium text-center mb-20 text-[#1a1a1a]">Why choose Panelo?</h2>
@@ -397,7 +419,7 @@ export default function Home() {
           <div className="grid md:grid-cols-2 gap-8">
             {/* Without Panelo */}
             <FadeIn delay={0.1}>
-              <div className="bg-slate-50 rounded-3xl p-10 border border-slate-100 h-full">
+              <div className="bg-slate-50/50 backdrop-blur-md rounded-3xl p-10 border border-slate-200/50 h-full">
                 <h3 className="text-2xl font-display text-center mb-10 text-slate-900">Without Panelo</h3>
                 <div className="space-y-6">
                   {[
@@ -418,8 +440,8 @@ export default function Home() {
 
             {/* With Panelo */}
             <FadeIn delay={0.2}>
-              <div className="bg-white rounded-3xl p-10 border-2 border-blue-100 shadow-lg h-full relative overflow-hidden">
-                <div className="absolute top-0 right-0 w-32 h-32 bg-blue-50 rounded-full blur-3xl -mr-10 -mt-10"></div>
+              <div className="bg-white/70 backdrop-blur-md rounded-3xl p-10 border-2 border-blue-100 shadow-lg h-full relative overflow-hidden">
+                <div className="absolute top-0 right-0 w-32 h-32 bg-blue-50/50 rounded-full blur-3xl -mr-10 -mt-10"></div>
                 <h3 className="text-2xl font-display text-center mb-10 text-blue-600">With Panelo</h3>
                 <div className="space-y-6 relative z-10">
                   {[
@@ -442,7 +464,7 @@ export default function Home() {
       </section>
 
       {/* Pricing Section */}
-      <section className="py-32 px-4 bg-slate-50/50 relative z-10">
+      <section className="py-32 px-4 relative z-10 bg-transparent">
         <div className="max-w-6xl mx-auto">
           <FadeIn>
             <h2 className="text-4xl md:text-5xl font-display font-medium text-center mb-20 text-[#1a1a1a]">Choose Your Plan</h2>
@@ -451,7 +473,7 @@ export default function Home() {
           <div className="grid md:grid-cols-3 gap-8 mb-16">
             {/* Freemium */}
             <FadeIn delay={0.1}>
-              <div className="bg-white rounded-3xl p-8 border border-slate-100 shadow-sm h-full flex flex-col">
+              <div className="bg-white/60 backdrop-blur-md rounded-3xl p-8 border border-white/50 shadow-sm h-full flex flex-col">
                 <div className="mb-8 text-center">
                   <h3 className="text-xl font-bold mb-2">Freemium</h3>
                   <p className="text-slate-500 text-sm mb-6">Try Panelo at no cost</p>
@@ -473,7 +495,7 @@ export default function Home() {
 
             {/* Starter */}
             <FadeIn delay={0.2}>
-              <div className="bg-white rounded-3xl p-8 border-2 border-orange-500 shadow-xl h-full flex flex-col relative transform md:-translate-y-4">
+              <div className="bg-white/80 backdrop-blur-md rounded-3xl p-8 border-2 border-orange-500 shadow-xl h-full flex flex-col relative transform md:-translate-y-4">
                 <div className="mb-8 text-center">
                   <h3 className="text-xl font-bold mb-2">Starter</h3>
                   <p className="text-slate-500 text-sm mb-6">Perfect for small teams</p>
@@ -495,7 +517,7 @@ export default function Home() {
 
             {/* Professional */}
             <FadeIn delay={0.3}>
-              <div className="bg-white rounded-3xl p-8 border border-slate-100 shadow-sm h-full flex flex-col">
+              <div className="bg-white/60 backdrop-blur-md rounded-3xl p-8 border border-white/50 shadow-sm h-full flex flex-col">
                 <div className="mb-8 text-center">
                   <h3 className="text-xl font-bold mb-2">Professional</h3>
                   <p className="text-slate-500 text-sm mb-6">For growing businesses</p>
@@ -537,7 +559,7 @@ export default function Home() {
       </section>
 
       {/* FAQs Section */}
-      <section className="py-32 px-4 bg-white relative z-10">
+      <section className="py-32 px-4 relative z-10 bg-transparent">
         <div className="max-w-3xl mx-auto">
           <FadeIn>
             <h2 className="text-4xl md:text-5xl font-display font-medium text-center mb-16 text-[#1a1a1a]">Frequently Asked Questions</h2>
