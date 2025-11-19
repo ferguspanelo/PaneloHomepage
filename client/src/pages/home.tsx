@@ -20,17 +20,17 @@ export default function Home() {
       
       {/* Continuous Aurora Background - Spanning Hero & Features */}
       <div className="absolute top-0 left-0 right-0 h-[220vh] z-0 overflow-hidden pointer-events-none">
-        {/* Dark Orange - Dominant Top Left */}
-        <div className="absolute -top-[10%] -left-[10%] w-[90%] h-[60%] rounded-full bg-[#ea580c] blur-[130px] opacity-40 mix-blend-multiply animate-blob" style={{ animationDelay: '0s' }}></div>
+        {/* Dark Orange - Top Left (Reduced opacity) */}
+        <div className="absolute -top-[10%] -left-[10%] w-[90%] h-[60%] rounded-full bg-[#ea580c] blur-[130px] opacity-30 mix-blend-multiply animate-blob" style={{ animationDelay: '0s' }}></div>
         
-        {/* Light Orange - Dominant Center/Right */}
-        <div className="absolute top-[5%] -right-[10%] w-[80%] h-[70%] rounded-full bg-[#fb923c] blur-[110px] opacity-50 mix-blend-multiply animate-blob" style={{ animationDelay: '2s' }}></div>
+        {/* Light Orange - Top Right (Reduced opacity) */}
+        <div className="absolute top-[5%] -right-[10%] w-[80%] h-[70%] rounded-full bg-[#fb923c] blur-[110px] opacity-30 mix-blend-multiply animate-blob" style={{ animationDelay: '2s' }}></div>
         
-        {/* Blue - Moved up to be visible in first section */}
-        <div className="absolute top-[40%] right-[15%] w-[60%] h-[60%] rounded-full bg-[#60a5fa] blur-[130px] opacity-30 mix-blend-multiply animate-blob" style={{ animationDelay: '4s' }}></div>
+        {/* Blue - Moved further up and increased opacity for more presence */}
+        <div className="absolute top-[25%] right-[10%] w-[70%] h-[70%] rounded-full bg-[#60a5fa] blur-[130px] opacity-60 mix-blend-multiply animate-blob" style={{ animationDelay: '4s' }}></div>
         
-        {/* Grey - Moved up to be visible in first section */}
-        <div className="absolute top-[35%] -right-[5%] w-[50%] h-[60%] rounded-full bg-[#94a3b8] blur-[100px] opacity-40 mix-blend-multiply animate-blob" style={{ animationDelay: '1s' }}></div>
+        {/* Grey - Mid/Bottom Right */}
+        <div className="absolute top-[45%] -right-[5%] w-[50%] h-[60%] rounded-full bg-[#94a3b8] blur-[100px] opacity-40 mix-blend-multiply animate-blob" style={{ animationDelay: '1s' }}></div>
 
         {/* Fade to white at the bottom to remove harsh lines */}
         <div className="absolute bottom-0 left-0 right-0 h-[30vh] bg-gradient-to-t from-white via-white/80 to-transparent"></div>
@@ -61,7 +61,7 @@ export default function Home() {
           <FadeIn delay={0.3}>
             <h1 className="text-6xl md:text-8xl font-display font-semibold tracking-tight leading-[0.95] text-[#1a1a1a]">
               Identify your winners early. <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-700 via-orange-500 to-slate-600">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-600 via-blue-500 to-slate-600">
                 Launch smarter.
               </span>
             </h1>
