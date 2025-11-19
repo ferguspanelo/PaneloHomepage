@@ -52,32 +52,38 @@ export default function Home() {
 
       {/* Hero Section */}
       <section className="relative z-10 min-h-screen flex flex-col items-center justify-center text-center px-4 py-20">
-        <div className="max-w-5xl mx-auto space-y-8">
+        <div className="max-w-5xl mx-auto space-y-6">
           <FadeIn delay={0.2}>
-            <div className="mb-8 flex justify-center">
+            <div className="mb-6 flex justify-center">
               <div className="flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/30 backdrop-blur-md border border-white/40 text-sm font-medium text-slate-800 shadow-sm">
                 <Sparkles className="w-3.5 h-3.5 text-orange-600" />
-                <span>AI-Powered Product Intelligence</span>
+                <span>AI-powered Consumer x Product Intelligence</span>
               </div>
             </div>
           </FadeIn>
 
           <FadeIn delay={0.3}>
-            <h1 className="text-6xl md:text-8xl font-display font-semibold tracking-tight leading-[0.95] text-[#1a1a1a]">
-              Identify your winners early. <br />
+            <h1 className="text-7xl md:text-9xl font-display font-normal tracking-tight leading-[0.95]">
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-600 via-blue-500 to-slate-600">
-                Launch smarter.
+                Launch Smarter.
               </span>
             </h1>
           </FadeIn>
 
           <FadeIn delay={0.4}>
-            <p className="text-xl md:text-2xl text-slate-700 max-w-2xl mx-auto leading-relaxed font-light">
-              Embed consumer insight into your product range architecture. Decode the why before you invest.
+             <h2 className="text-4xl md:text-5xl font-display font-normal text-black tracking-tight leading-tight">
+              Identify your winners early. <br className="hidden md:block" />
+              Decode the why before you invest.
+            </h2>
+          </FadeIn>
+
+          <FadeIn delay={0.5}>
+            <p className="text-xl md:text-2xl text-slate-700 max-w-2xl mx-auto leading-relaxed font-light mt-4">
+              Embed consumer insights into your product range architecture and drive profitabilty through you loyalty program.
             </p>
           </FadeIn>
 
-          <FadeIn delay={0.5} className="pt-8">
+          <FadeIn delay={0.6} className="pt-8">
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="px-8 py-4 rounded-full bg-[#1a1a1a] text-white font-medium text-lg hover:bg-slate-800 transition-all shadow-lg hover:shadow-xl active:scale-95 flex items-center justify-center gap-2 group">
                 Start Predicting Demand
