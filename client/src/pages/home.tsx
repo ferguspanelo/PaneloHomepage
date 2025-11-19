@@ -20,8 +20,8 @@ export default function Home() {
       
       {/* Continuous Aurora Background - Spanning Hero & Features */}
       <div className="absolute top-0 left-0 right-0 h-[220vh] z-0 overflow-hidden pointer-events-none">
-        {/* Dark Orange - Top Left (Reduced opacity) */}
-        <div className="absolute -top-[10%] -left-[10%] w-[90%] h-[60%] rounded-full bg-[#ea580c] blur-[130px] opacity-30 mix-blend-multiply animate-blob" style={{ animationDelay: '0s' }}></div>
+        {/* Dark Orange - Top Left (Darker and slightly more opaque) */}
+        <div className="absolute -top-[10%] -left-[10%] w-[90%] h-[60%] rounded-full bg-[#c2410c] blur-[130px] opacity-50 mix-blend-multiply animate-blob" style={{ animationDelay: '0s' }}></div>
         
         {/* Light Orange - Top Right (Reduced opacity) */}
         <div className="absolute top-[5%] -right-[10%] w-[80%] h-[70%] rounded-full bg-[#fb923c] blur-[110px] opacity-30 mix-blend-multiply animate-blob" style={{ animationDelay: '2s' }}></div>
