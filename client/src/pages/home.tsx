@@ -74,10 +74,20 @@ export default function Home() {
       {/* Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-50 px-6 py-6 flex justify-between items-center bg-transparent text-[#1a1a1a]">
         <div className="text-2xl font-bold tracking-tighter font-display">Panelo</div>
-        <div className="hidden md:flex gap-8 text-sm font-medium tracking-wide">
-          <a href="#features" className="hover:opacity-70 transition-opacity">Capabilities</a>
-          <a href="#process" className="hover:opacity-70 transition-opacity">Process</a>
-          <a href="#" className="hover:opacity-70 transition-opacity">Login</a>
+        <div className="hidden md:flex items-center gap-12">
+          <div className="flex gap-8 text-sm font-medium tracking-wide">
+            <a href="#features" className="hover:opacity-70 transition-opacity">Product</a>
+            <a href="#process" className="hover:opacity-70 transition-opacity">Process</a>
+            <a href="#pricing" className="hover:opacity-70 transition-opacity">Pricing</a>
+          </div>
+          <div className="flex items-center gap-3">
+             <button className="px-6 py-2.5 rounded-full bg-white/40 backdrop-blur-md border border-white/20 text-slate-800 text-sm font-medium hover:bg-white/50 transition-all shadow-sm">
+               Log in
+             </button>
+             <button className="px-6 py-2.5 rounded-full bg-[#1a1a1a]/80 backdrop-blur-md border border-[#1a1a1a]/50 text-white text-sm font-medium hover:bg-[#1a1a1a] transition-all shadow-sm">
+               Get Started
+             </button>
+          </div>
         </div>
       </nav>
 
@@ -467,7 +477,7 @@ export default function Home() {
       </section>
 
       {/* Pricing Section */}
-      <section className="py-32 px-4 relative z-10 bg-transparent">
+      <section id="pricing" className="py-32 px-4 relative z-10 bg-transparent">
         <div className="max-w-6xl mx-auto">
           <FadeIn>
             <h2 className="text-4xl md:text-5xl font-display font-medium text-center mb-20 text-[#1a1a1a]">Choose Your Plan</h2>
