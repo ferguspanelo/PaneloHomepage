@@ -19,7 +19,7 @@ export default function Home() {
     <div className="min-h-screen bg-[#f8f5f2] text-[#1a1a1a] selection:bg-[#ffaa4c] selection:text-white overflow-hidden relative">
       
       {/* Continuous Aurora Background - Spanning Hero & Features */}
-      <div className="absolute top-0 left-0 right-0 h-[180vh] z-0 overflow-hidden pointer-events-none">
+      <div className="absolute top-0 left-0 right-0 h-[200vh] z-0 overflow-hidden pointer-events-none">
         {/* Dark Orange - Dominant Top Left */}
         <div className="absolute -top-[10%] -left-[10%] w-[90%] h-[60%] rounded-full bg-[#ea580c] blur-[130px] opacity-40 mix-blend-multiply animate-blob" style={{ animationDelay: '0s' }}></div>
         
@@ -27,10 +27,10 @@ export default function Home() {
         <div className="absolute top-[5%] -right-[10%] w-[80%] h-[70%] rounded-full bg-[#fb923c] blur-[110px] opacity-50 mix-blend-multiply animate-blob" style={{ animationDelay: '2s' }}></div>
         
         {/* Blue - Transitioning in lower section */}
-        <div className="absolute top-[45%] -left-[10%] w-[60%] h-[60%] rounded-full bg-[#60a5fa] blur-[130px] opacity-30 mix-blend-multiply animate-blob" style={{ animationDelay: '4s' }}></div>
+        <div className="absolute top-[60%] right-[10%] w-[60%] h-[60%] rounded-full bg-[#60a5fa] blur-[130px] opacity-30 mix-blend-multiply animate-blob" style={{ animationDelay: '4s' }}></div>
         
-        {/* Grey - Bottom/Right anchor */}
-        <div className="absolute top-[40%] right-[0%] w-[50%] h-[60%] rounded-full bg-[#94a3b8] blur-[100px] opacity-40 mix-blend-multiply animate-blob" style={{ animationDelay: '1s' }}></div>
+        {/* Grey - Bottom Right anchor */}
+        <div className="absolute top-[55%] -right-[5%] w-[50%] h-[60%] rounded-full bg-[#94a3b8] blur-[100px] opacity-40 mix-blend-multiply animate-blob" style={{ animationDelay: '1s' }}></div>
       </div>
 
       {/* Navigation */}
@@ -82,17 +82,11 @@ export default function Home() {
             </div>
           </FadeIn>
         </div>
-
-        {/* Floating Elements / Visual Interest */}
-        <div className="absolute bottom-10 left-0 right-0 flex justify-center animate-bounce duration-[3000ms]">
-           <div className="w-px h-16 bg-gradient-to-b from-slate-400/0 via-slate-400 to-slate-400/0"></div>
-        </div>
       </section>
 
       {/* Problem / Insight Section */}
       <section id="features" className="py-32 px-4 relative z-10">
-        {/* Glass container for the section */}
-        <div className="absolute inset-0 bg-white/30 backdrop-blur-3xl -z-10"></div>
+        {/* Removed the absolute inset-0 background to eliminate the line */}
         
         <div className="max-w-6xl mx-auto">
           <FadeIn>
