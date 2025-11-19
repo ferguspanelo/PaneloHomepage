@@ -28,12 +28,12 @@ export default function Home() {
       <div className="absolute top-0 left-0 right-0 h-full min-h-[800vh] z-0 overflow-hidden pointer-events-none">
         
         {/* --- SECTION 1: HERO (Vibrant) --- */}
-        {/* Dark Orange - Top Left */}
-        <div className="absolute top-[-2%] -left-[10%] w-[90%] h-[10%] rounded-full bg-[#c2410c] blur-[130px] opacity-50 mix-blend-multiply animate-blob"></div>
-        {/* Light Orange - Top Right */}
-        <div className="absolute top-[1%] -right-[10%] w-[80%] h-[12%] rounded-full bg-[#fb923c] blur-[110px] opacity-30 mix-blend-multiply animate-blob animation-delay-2000"></div>
-        {/* Blue - Top Right/Center */}
-        <div className="absolute top-[3%] right-[10%] w-[70%] h-[12%] rounded-full bg-[#60a5fa] blur-[130px] opacity-60 mix-blend-multiply animate-blob animation-delay-4000"></div>
+        {/* Dark Orange - Top Left (Increased opacity by ~15% and blue reduced) */}
+        <div className="absolute top-[-2%] -left-[10%] w-[90%] h-[10%] rounded-full bg-[#c2410c] blur-[130px] opacity-65 mix-blend-multiply animate-blob"></div>
+        {/* Light Orange - Top Right (Increased opacity) */}
+        <div className="absolute top-[1%] -right-[10%] w-[80%] h-[12%] rounded-full bg-[#fb923c] blur-[110px] opacity-45 mix-blend-multiply animate-blob animation-delay-2000"></div>
+        {/* Blue - Top Right/Center (Reduced opacity to let orange shine) */}
+        <div className="absolute top-[3%] right-[10%] w-[70%] h-[12%] rounded-full bg-[#60a5fa] blur-[130px] opacity-50 mix-blend-multiply animate-blob animation-delay-4000"></div>
 
         {/* --- SECTION 2: FEATURES (Bolder Blue/Grey with Orange) --- */}
         {/* Bolder Blue - Left */}
