@@ -1,6 +1,12 @@
 import { motion } from "framer-motion";
-import { ArrowRight, Sparkles } from "lucide-react";
+import { ArrowRight, Sparkles, Trophy, SlidersHorizontal, Heart, Check, X, Plus, Minus, CheckCircle2, XCircle } from "lucide-react";
 import { cn } from "@/lib/utils";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 
 const FadeIn = ({ children, delay = 0, className }: { children: React.ReactNode; delay?: number; className?: string }) => (
   <motion.div
@@ -19,22 +25,22 @@ export default function Home() {
     <div className="min-h-screen bg-white text-[#1a1a1a] selection:bg-[#ffaa4c] selection:text-white overflow-hidden relative">
       
       {/* Continuous Aurora Background - Spanning Hero & Features */}
-      <div className="absolute top-0 left-0 right-0 h-[400vh] z-0 overflow-hidden pointer-events-none">
+      <div className="absolute top-0 left-0 right-0 h-[600vh] z-0 overflow-hidden pointer-events-none">
         {/* Dark Orange - Top Left (Darker and slightly more opaque) */}
-        <div className="absolute -top-[5%] -left-[10%] w-[90%] h-[30%] rounded-full bg-[#c2410c] blur-[130px] opacity-50 mix-blend-multiply animate-blob" style={{ animationDelay: '0s' }}></div>
+        <div className="absolute -top-[2%] -left-[10%] w-[90%] h-[20%] rounded-full bg-[#c2410c] blur-[130px] opacity-50 mix-blend-multiply animate-blob" style={{ animationDelay: '0s' }}></div>
         
         {/* Light Orange - Top Right (Reduced opacity) */}
-        <div className="absolute top-[2%] -right-[10%] w-[80%] h-[35%] rounded-full bg-[#fb923c] blur-[110px] opacity-30 mix-blend-multiply animate-blob" style={{ animationDelay: '2s' }}></div>
+        <div className="absolute top-[1%] -right-[10%] w-[80%] h-[25%] rounded-full bg-[#fb923c] blur-[110px] opacity-30 mix-blend-multiply animate-blob" style={{ animationDelay: '2s' }}></div>
         
         {/* Blue - Moved further up and increased opacity for more presence */}
-        <div className="absolute top-[10%] right-[10%] w-[70%] h-[35%] rounded-full bg-[#60a5fa] blur-[130px] opacity-60 mix-blend-multiply animate-blob" style={{ animationDelay: '4s' }}></div>
+        <div className="absolute top-[5%] right-[10%] w-[70%] h-[25%] rounded-full bg-[#60a5fa] blur-[130px] opacity-60 mix-blend-multiply animate-blob" style={{ animationDelay: '4s' }}></div>
         
         {/* Grey - Mid/Bottom Right */}
-        <div className="absolute top-[20%] -right-[5%] w-[50%] h-[30%] rounded-full bg-[#94a3b8] blur-[100px] opacity-40 mix-blend-multiply animate-blob" style={{ animationDelay: '1s' }}></div>
+        <div className="absolute top-[10%] -right-[5%] w-[50%] h-[20%] rounded-full bg-[#94a3b8] blur-[100px] opacity-40 mix-blend-multiply animate-blob" style={{ animationDelay: '1s' }}></div>
 
         {/* Extended background elements for the longer vertical section */}
-         <div className="absolute top-[40%] left-[10%] w-[60%] h-[30%] rounded-full bg-[#fb923c] blur-[150px] opacity-20 mix-blend-multiply animate-blob" style={{ animationDelay: '3s' }}></div>
-         <div className="absolute top-[60%] right-[20%] w-[70%] h-[30%] rounded-full bg-[#60a5fa] blur-[150px] opacity-20 mix-blend-multiply animate-blob" style={{ animationDelay: '5s' }}></div>
+         <div className="absolute top-[15%] left-[10%] w-[60%] h-[20%] rounded-full bg-[#fb923c] blur-[150px] opacity-20 mix-blend-multiply animate-blob" style={{ animationDelay: '3s' }}></div>
+         <div className="absolute top-[25%] right-[20%] w-[70%] h-[20%] rounded-full bg-[#60a5fa] blur-[150px] opacity-20 mix-blend-multiply animate-blob" style={{ animationDelay: '5s' }}></div>
 
         {/* Fade to white at the bottom to remove harsh lines */}
         <div className="absolute bottom-0 left-0 right-0 h-[30vh] bg-gradient-to-t from-white via-white/80 to-transparent"></div>
@@ -258,6 +264,284 @@ export default function Home() {
             </div>
 
           </div>
+        </div>
+      </section>
+
+      {/* Feedback Methodologies Section */}
+      <section className="py-32 px-4 bg-slate-50/50 relative z-10">
+        <div className="max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-3 gap-8">
+            {/* Product Ranking */}
+            <FadeIn delay={0.1}>
+              <div className="bg-white rounded-3xl p-8 border border-slate-100 shadow-sm hover:shadow-md transition-all h-full flex flex-col">
+                <div className="mb-8 flex justify-center">
+                   {/* Placeholder illustration */}
+                   <div className="w-full aspect-[4/3] bg-blue-50 rounded-xl flex items-center justify-center">
+                    <Trophy className="w-16 h-16 text-blue-200" />
+                   </div>
+                </div>
+                <h3 className="text-2xl font-display text-center mb-2">Product Ranking</h3>
+                <p className="text-sm text-slate-500 text-center mb-6">Tournament-style head-to-head comparisons</p>
+                <div className="space-y-4 text-slate-600 text-sm leading-relaxed mb-8 flex-grow">
+                  <p>Customers compare your products in head-to-head matchups.</p>
+                  <p>Our intelligent ranking system surfaces true favorites with statistical confidence so you know what deserves the shelf space and inventory investment.</p>
+                </div>
+                <div className="space-y-3 border-t border-slate-100 pt-6">
+                  {["Relative product popularity", "Confidence-backed decisions", "Smarter buying and assortment planning"].map((item, i) => (
+                    <div key={i} className="flex items-start gap-3">
+                      <div className="mt-0.5 bg-blue-100 text-blue-600 rounded-full p-0.5"><Check className="w-3 h-3" /></div>
+                      <span className="text-sm text-slate-700">{item}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </FadeIn>
+
+            {/* Attribute Insights */}
+            <FadeIn delay={0.2}>
+              <div className="bg-white rounded-3xl p-8 border border-slate-100 shadow-sm hover:shadow-md transition-all h-full flex flex-col">
+                <div className="mb-8 flex justify-center">
+                   {/* Placeholder illustration */}
+                   <div className="w-full aspect-[4/3] bg-orange-50 rounded-xl flex items-center justify-center">
+                    <SlidersHorizontal className="w-16 h-16 text-orange-200" />
+                   </div>
+                </div>
+                <h3 className="text-2xl font-display text-center mb-2">Attribute Insights</h3>
+                <p className="text-sm text-slate-500 text-center mb-6">Detailed attribute-level feedback collection</p>
+                <div className="space-y-4 text-slate-600 text-sm leading-relaxed mb-8 flex-grow">
+                  <p>Users give direct feedback on things like color, cut, material, and price.</p>
+                  <p>It's your window into why certain products resonate giving your design and merchandising teams a creative edge.</p>
+                </div>
+                <div className="space-y-3 border-t border-slate-100 pt-6">
+                  {["Attribute-level performance", "Custom question support", "Design validation and product improvement"].map((item, i) => (
+                    <div key={i} className="flex items-start gap-3">
+                      <div className="mt-0.5 bg-orange-100 text-orange-600 rounded-full p-0.5"><Check className="w-3 h-3" /></div>
+                      <span className="text-sm text-slate-700">{item}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </FadeIn>
+
+            {/* Preference Mapping */}
+            <FadeIn delay={0.3}>
+              <div className="bg-white rounded-3xl p-8 border border-slate-100 shadow-sm hover:shadow-md transition-all h-full flex flex-col">
+                <div className="mb-8 flex justify-center">
+                   {/* Placeholder illustration */}
+                   <div className="w-full aspect-[4/3] bg-red-50 rounded-xl flex items-center justify-center">
+                    <Heart className="w-16 h-16 text-red-200" />
+                   </div>
+                </div>
+                <h3 className="text-2xl font-display text-center mb-2">Preference Mapping</h3>
+                <p className="text-sm text-slate-500 text-center mb-6">Multi-select favorite product identification</p>
+                <div className="space-y-4 text-slate-600 text-sm leading-relaxed mb-8 flex-grow">
+                  <p>Let customers pick their personal favorites from a curated set.</p>
+                  <p>Analyze how products cluster together for given cohorts to reveal bundle opportunities, go-to-market themes, and merchandising strategy.</p>
+                </div>
+                <div className="space-y-3 border-t border-slate-100 pt-6">
+                  {["Product combination analysis", "Cohort-based trends", "GTM guidance for marketing & merchandising"].map((item, i) => (
+                    <div key={i} className="flex items-start gap-3">
+                      <div className="mt-0.5 bg-red-100 text-red-600 rounded-full p-0.5"><Check className="w-3 h-3" /></div>
+                      <span className="text-sm text-slate-700">{item}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </FadeIn>
+          </div>
+        </div>
+      </section>
+
+      {/* Why Panelo Section */}
+      <section className="py-32 px-4 bg-white relative z-10">
+        <div className="max-w-6xl mx-auto">
+          <FadeIn>
+            <h2 className="text-4xl md:text-5xl font-display font-medium text-center mb-20 text-[#1a1a1a]">Why choose Panelo?</h2>
+          </FadeIn>
+
+          <div className="grid md:grid-cols-2 gap-8">
+            {/* Without Panelo */}
+            <FadeIn delay={0.1}>
+              <div className="bg-slate-50 rounded-3xl p-10 border border-slate-100 h-full">
+                <h3 className="text-2xl font-display text-center mb-10 text-slate-900">Without Panelo</h3>
+                <div className="space-y-6">
+                  {[
+                    "Gut-feeling and anecdotal product decisions",
+                    "Limited understanding of why products perform",
+                    "Slow and inconsistent feedback loops",
+                    "Shallow participant insights",
+                    "No visibility into early product success signals"
+                  ].map((item, i) => (
+                    <div key={i} className="flex items-center gap-4">
+                      <XCircle className="w-6 h-6 text-red-400 flex-shrink-0" />
+                      <span className="text-slate-600">{item}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </FadeIn>
+
+            {/* With Panelo */}
+            <FadeIn delay={0.2}>
+              <div className="bg-white rounded-3xl p-10 border-2 border-blue-100 shadow-lg h-full relative overflow-hidden">
+                <div className="absolute top-0 right-0 w-32 h-32 bg-blue-50 rounded-full blur-3xl -mr-10 -mt-10"></div>
+                <h3 className="text-2xl font-display text-center mb-10 text-blue-600">With Panelo</h3>
+                <div className="space-y-6 relative z-10">
+                  {[
+                    "Consumer-informed product design and inventory decisions",
+                    "Quantitative, data-backed product validation",
+                    "Real-time response and trend tracking",
+                    "Deep participant segmentation and attribute analysis",
+                    "Clear visualizations for easy interpretation"
+                  ].map((item, i) => (
+                    <div key={i} className="flex items-center gap-4">
+                      <CheckCircle2 className="w-6 h-6 text-green-500 flex-shrink-0" />
+                      <span className="text-slate-700 font-medium">{item}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </FadeIn>
+          </div>
+        </div>
+      </section>
+
+      {/* Pricing Section */}
+      <section className="py-32 px-4 bg-slate-50/50 relative z-10">
+        <div className="max-w-6xl mx-auto">
+          <FadeIn>
+            <h2 className="text-4xl md:text-5xl font-display font-medium text-center mb-20 text-[#1a1a1a]">Choose Your Plan</h2>
+          </FadeIn>
+
+          <div className="grid md:grid-cols-3 gap-8 mb-16">
+            {/* Freemium */}
+            <FadeIn delay={0.1}>
+              <div className="bg-white rounded-3xl p-8 border border-slate-100 shadow-sm h-full flex flex-col">
+                <div className="mb-8 text-center">
+                  <h3 className="text-xl font-bold mb-2">Freemium</h3>
+                  <p className="text-slate-500 text-sm mb-6">Try Panelo at no cost</p>
+                  <div className="text-4xl font-display font-medium">$0<span className="text-lg text-slate-400 font-sans">/month</span></div>
+                </div>
+                <div className="space-y-4 mb-8 flex-grow">
+                  {["1 survey per month", "20 participants", "10 products max", "Product ranking only", "Foundational Analytics"].map((item, i) => (
+                    <div key={i} className="flex items-center gap-3">
+                      <CheckCircle2 className="w-5 h-5 text-green-500 flex-shrink-0" />
+                      <span className="text-sm text-slate-600">{item}</span>
+                    </div>
+                  ))}
+                </div>
+                <button className="w-full py-3 rounded-xl border border-slate-200 font-medium hover:bg-slate-50 transition-colors">
+                  Get Started Free
+                </button>
+              </div>
+            </FadeIn>
+
+            {/* Starter */}
+            <FadeIn delay={0.2}>
+              <div className="bg-white rounded-3xl p-8 border-2 border-blue-500 shadow-xl h-full flex flex-col relative transform md:-translate-y-4">
+                <div className="mb-8 text-center">
+                  <h3 className="text-xl font-bold mb-2">Starter</h3>
+                  <p className="text-slate-500 text-sm mb-6">Perfect for small teams</p>
+                  <div className="text-4xl font-display font-medium">$299<span className="text-lg text-slate-400 font-sans">/month</span></div>
+                </div>
+                <div className="space-y-4 mb-8 flex-grow">
+                  {["5 surveys per month", "100 participants", "40 products max", "All survey types", "AI insights & analytics"].map((item, i) => (
+                    <div key={i} className="flex items-center gap-3">
+                      <CheckCircle2 className="w-5 h-5 text-green-500 flex-shrink-0" />
+                      <span className="text-sm text-slate-600">{item}</span>
+                    </div>
+                  ))}
+                </div>
+                <button className="w-full py-3 rounded-xl bg-blue-600 text-white font-medium hover:bg-blue-700 transition-colors shadow-lg shadow-blue-200">
+                  Get Started
+                </button>
+              </div>
+            </FadeIn>
+
+            {/* Professional */}
+            <FadeIn delay={0.3}>
+              <div className="bg-white rounded-3xl p-8 border border-slate-100 shadow-sm h-full flex flex-col">
+                <div className="mb-8 text-center">
+                  <h3 className="text-xl font-bold mb-2">Professional</h3>
+                  <p className="text-slate-500 text-sm mb-6">For growing businesses</p>
+                  <div className="text-4xl font-display font-medium">$999<span className="text-lg text-slate-400 font-sans">/month</span></div>
+                </div>
+                <div className="space-y-4 mb-8 flex-grow">
+                  {["Unlimited surveys", "Unlimited participants", "Unlimited products", "Advanced AI analytics", "Priority support"].map((item, i) => (
+                    <div key={i} className="flex items-center gap-3">
+                      <CheckCircle2 className="w-5 h-5 text-green-500 flex-shrink-0" />
+                      <span className="text-sm text-slate-600">{item}</span>
+                    </div>
+                  ))}
+                </div>
+                <button className="w-full py-3 rounded-xl border border-green-200 text-green-700 font-medium hover:bg-green-50 transition-colors">
+                  Get Started
+                </button>
+              </div>
+            </FadeIn>
+          </div>
+
+          {/* Enterprise Banner */}
+          <FadeIn delay={0.4}>
+            <div className="rounded-3xl bg-[#1a1a2e] p-8 md:p-12 text-white flex flex-col md:flex-row items-center justify-between gap-8 shadow-2xl">
+              <div className="max-w-2xl">
+                <h3 className="text-2xl font-bold mb-3">Need Enterprise Support?</h3>
+                <p className="text-slate-300 leading-relaxed">
+                  Looking for custom solutions, dedicated support, or higher participant limits? Our enterprise plan is tailored to your specific needs with advanced features and personalized onboarding.
+                </p>
+              </div>
+              <button className="px-8 py-4 rounded-xl bg-gradient-to-r from-purple-500 to-pink-500 font-bold text-white hover:opacity-90 transition-opacity whitespace-nowrap shadow-lg">
+                Contact Sales
+              </button>
+            </div>
+          </FadeIn>
+        </div>
+      </section>
+
+      {/* FAQs Section */}
+      <section className="py-32 px-4 bg-white relative z-10">
+        <div className="max-w-3xl mx-auto">
+          <FadeIn>
+            <h2 className="text-4xl md:text-5xl font-display font-medium text-center mb-16 text-[#1a1a1a]">Frequently Asked Questions</h2>
+          </FadeIn>
+
+          <FadeIn delay={0.2}>
+            <Accordion type="single" collapsible className="w-full">
+              {[
+                {
+                  q: "Who is Panelo made for?",
+                  a: "Panelo is designed for retailers, brands, and product teams who want to make data-driven decisions about product development, inventory, and marketing. Whether you're a startup launching new products or an established brand optimizing your assortment, Panelo provides the insights you need."
+                },
+                {
+                  q: "How does Panelo's AI analysis work?",
+                  a: "Our platform uses OpenAI's GPT-4 Vision to analyze product images and extract detailed attributes automatically. Combined with customer feedback data, we provide intelligent insights about product performance, customer preferences, and market opportunities."
+                },
+                {
+                  q: "What types of surveys can I create?",
+                  a: "Panelo offers three powerful survey types: Product Ranking (tournament-style comparisons), Attribute Insights (detailed feedback on specific product features), and Preference Mapping (favorite product identification). Each method provides unique insights for different business questions."
+                },
+                {
+                  q: "How quickly can I get results?",
+                  a: "Results appear in real-time as participants complete surveys. Our dashboard updates automatically, so you can monitor progress and gather insights immediately. Most surveys collect meaningful data within 24-48 hours depending on your audience size."
+                },
+                {
+                  q: "Can I upload my own customer database?",
+                  a: "Yes! You can connect your customer data, with intelligent field mapping and demographic segmentation. You can target specific customer segments and analyze how different groups respond to your products."
+                },
+                {
+                  q: "What kind of analytics do I get?",
+                  a: "Panelo provides comprehensive analytics including product performance rankings, demographic breakdowns, statistical confidence intervals, AI-generated insights, and actionable recommendations for inventory and marketing decisions."
+                }
+              ].map((faq, i) => (
+                <AccordionItem key={i} value={`item-${i}`}>
+                  <AccordionTrigger className="text-lg text-left font-medium text-slate-900">{faq.q}</AccordionTrigger>
+                  <AccordionContent className="text-slate-600 text-base leading-relaxed">
+                    {faq.a}
+                  </AccordionContent>
+                </AccordionItem>
+              ))}
+            </Accordion>
+          </FadeIn>
         </div>
       </section>
 
