@@ -129,8 +129,8 @@ export default function Home() {
                 <div className="flex-1 space-y-6 text-left md:text-left"> {/* Kept text align left for consistency even on right side */}
                   <h3 className="text-3xl md:text-4xl font-display font-normal text-[#1a1a1a]">Consumers Decide</h3>
                   <div className="space-y-4 text-lg text-slate-600 font-light leading-relaxed">
-                    <p>Invite your audience to embed insights early.</p>
-                    <p>Optimize your success by letting the market choose the winners.</p>
+                    <p>Invite your audience in to embed insights earlier</p>
+                    <p>Optimize your success by letting consumers identify the winners</p>
                   </div>
                 </div>
                 <div className="flex-1 w-full aspect-video rounded-3xl bg-slate-100/50 border border-white/50 shadow-sm backdrop-blur-sm flex items-center justify-center">
