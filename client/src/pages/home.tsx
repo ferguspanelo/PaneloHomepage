@@ -35,36 +35,36 @@ export default function Home() {
         {/* Blue - Top Right/Center */}
         <div className="absolute top-[3%] right-[10%] w-[70%] h-[12%] rounded-full bg-[#60a5fa] blur-[130px] opacity-60 mix-blend-multiply animate-blob animation-delay-4000"></div>
 
-        {/* --- SECTION 2: FEATURES (Faint Blue/Grey with subtle Orange) --- */}
-        {/* Faint Blue - Left */}
-        <div className="absolute top-[15%] left-[10%] w-[60%] h-[15%] rounded-full bg-[#93c5fd] blur-[150px] opacity-30 mix-blend-multiply"></div>
-        {/* Faint Grey - Right */}
-        <div className="absolute top-[18%] -right-[5%] w-[50%] h-[15%] rounded-full bg-[#cbd5e1] blur-[150px] opacity-40 mix-blend-multiply"></div>
-        {/* Subtle Orange Hint - Center */}
-        <div className="absolute top-[20%] left-[30%] w-[40%] h-[10%] rounded-full bg-[#fed7aa] blur-[150px] opacity-20 mix-blend-multiply"></div>
+        {/* --- SECTION 2: FEATURES (Bolder Blue/Grey with Orange) --- */}
+        {/* Bolder Blue - Left */}
+        <div className="absolute top-[15%] left-[10%] w-[60%] h-[15%] rounded-full bg-[#60a5fa] blur-[150px] opacity-40 mix-blend-multiply"></div>
+        {/* Bolder Grey - Right */}
+        <div className="absolute top-[18%] -right-[5%] w-[50%] h-[15%] rounded-full bg-[#94a3b8] blur-[150px] opacity-50 mix-blend-multiply"></div>
+        {/* Stronger Orange Hint - Center */}
+        <div className="absolute top-[20%] left-[30%] w-[40%] h-[10%] rounded-full bg-[#fb923c] blur-[150px] opacity-30 mix-blend-multiply"></div>
 
-        {/* --- SECTION 3: PROCESS (Cooler Tones) --- */}
-        {/* Cool Grey/Blue - Spanning width */}
-        <div className="absolute top-[35%] left-[20%] w-[80%] h-[15%] rounded-full bg-[#e2e8f0] blur-[160px] opacity-50 mix-blend-multiply"></div>
-        <div className="absolute top-[38%] right-[20%] w-[40%] h-[12%] rounded-full bg-[#bfdbfe] blur-[140px] opacity-30 mix-blend-multiply"></div>
+        {/* --- SECTION 3: PROCESS (Rich Tones) --- */}
+        {/* Richer Grey/Blue - Spanning width */}
+        <div className="absolute top-[35%] left-[20%] w-[80%] h-[15%] rounded-full bg-[#cbd5e1] blur-[160px] opacity-60 mix-blend-multiply"></div>
+        <div className="absolute top-[38%] right-[20%] w-[40%] h-[12%] rounded-full bg-[#93c5fd] blur-[140px] opacity-40 mix-blend-multiply"></div>
 
-        {/* --- SECTION 4: METHODOLOGIES & WHY PANELO (Clean, Faint) --- */}
-        {/* Very Faint Blue - Top Left of this section */}
-        <div className="absolute top-[50%] -left-[10%] w-[60%] h-[15%] rounded-full bg-[#dbeafe] blur-[150px] opacity-30 mix-blend-multiply"></div>
-        {/* Very Faint Grey - Bottom Right of this section */}
-        <div className="absolute top-[55%] -right-[10%] w-[60%] h-[15%] rounded-full bg-[#f1f5f9] blur-[150px] opacity-40 mix-blend-multiply"></div>
+        {/* --- SECTION 4: METHODOLOGIES & WHY PANELO (Distinct Colors) --- */}
+        {/* Distinct Blue - Top Left of this section */}
+        <div className="absolute top-[50%] -left-[10%] w-[60%] h-[15%] rounded-full bg-[#bfdbfe] blur-[150px] opacity-40 mix-blend-multiply"></div>
+        {/* Distinct Grey - Bottom Right of this section */}
+        <div className="absolute top-[55%] -right-[10%] w-[60%] h-[15%] rounded-full bg-[#e2e8f0] blur-[150px] opacity-50 mix-blend-multiply"></div>
 
-        {/* --- SECTION 5: PRICING & FAQ (Warming up slightly) --- */}
-        {/* Faint Orange returning - Left */}
-        <div className="absolute top-[70%] -left-[5%] w-[40%] h-[12%] rounded-full bg-[#ffedd5] blur-[140px] opacity-30 mix-blend-multiply"></div>
+        {/* --- SECTION 5: PRICING & FAQ (Warming up significantly) --- */}
+        {/* Stronger Orange returning - Left */}
+        <div className="absolute top-[70%] -left-[5%] w-[50%] h-[15%] rounded-full bg-[#fdba74] blur-[140px] opacity-40 mix-blend-multiply"></div>
         {/* Blue/Grey - Right */}
-        <div className="absolute top-[75%] right-[10%] w-[50%] h-[12%] rounded-full bg-[#e2e8f0] blur-[140px] opacity-40 mix-blend-multiply"></div>
+        <div className="absolute top-[75%] right-[10%] w-[50%] h-[12%] rounded-full bg-[#cbd5e1] blur-[140px] opacity-50 mix-blend-multiply"></div>
 
-        {/* --- SECTION 6: FOOTER (Stronger Orange Return) --- */}
-        {/* Stronger Orange - Bottom Center */}
-        <div className="absolute top-[90%] left-[20%] w-[60%] h-[10%] rounded-full bg-[#fb923c] blur-[150px] opacity-40 mix-blend-multiply"></div>
-        {/* Supporting Blue - Bottom Right */}
-        <div className="absolute top-[92%] -right-[10%] w-[40%] h-[8%] rounded-full bg-[#60a5fa] blur-[150px] opacity-20 mix-blend-multiply"></div>
+        {/* --- SECTION 6: FOOTER (Deep Wide Orange) --- */}
+        {/* Deep Wide Orange - Bottom Center - Spanning full width */}
+        <div className="absolute top-[88%] -left-[20%] w-[140%] h-[20%] rounded-full bg-[#ea580c] blur-[180px] opacity-60 mix-blend-multiply"></div>
+        {/* Supporting Deep Blue - Bottom Right */}
+        <div className="absolute top-[92%] -right-[10%] w-[40%] h-[10%] rounded-full bg-[#3b82f6] blur-[150px] opacity-30 mix-blend-multiply"></div>
 
       </div>
 
@@ -606,7 +606,7 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer className="py-20 bg-[#1a1a1a] text-white relative z-10">
+      <footer className="py-20 bg-[#431407] text-white relative z-10">
         <div className="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-8">
           <div className="text-3xl font-display font-bold tracking-tighter">Panelo</div>
           <div className="text-slate-400 text-sm">© 2025 Panelo Inc. All rights reserved.</div>
