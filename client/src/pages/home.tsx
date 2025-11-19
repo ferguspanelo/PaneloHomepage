@@ -69,7 +69,7 @@ export default function Home() {
       </div>
 
       {/* Navigation */}
-      <nav className="fixed top-0 left-0 right-0 z-50 px-6 py-6 flex justify-between items-center bg-transparent mix-blend-difference text-white">
+      <nav className="fixed top-0 left-0 right-0 z-50 px-6 py-6 flex justify-between items-center bg-transparent text-[#1a1a1a]">
         <div className="text-2xl font-bold tracking-tighter font-display">Panelo</div>
         <div className="hidden md:flex gap-8 text-sm font-medium tracking-wide">
           <a href="#features" className="hover:opacity-70 transition-opacity">Capabilities</a>
