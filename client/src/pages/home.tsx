@@ -43,10 +43,13 @@ export default function Home() {
         {/* Stronger Orange Hint - Center */}
         <div className="absolute top-[20%] left-[30%] w-[40%] h-[10%] rounded-full bg-[#fb923c] blur-[150px] opacity-30 mix-blend-multiply"></div>
 
-        {/* --- SECTION 3: PROCESS (Rich Tones) --- */}
+        {/* --- SECTION 3: PROCESS (Rich Tones + New Orange Blob) --- */}
         {/* Richer Grey/Blue - Spanning width */}
         <div className="absolute top-[35%] left-[20%] w-[80%] h-[15%] rounded-full bg-[#cbd5e1] blur-[160px] opacity-60 mix-blend-multiply"></div>
         <div className="absolute top-[38%] right-[20%] w-[40%] h-[12%] rounded-full bg-[#93c5fd] blur-[140px] opacity-40 mix-blend-multiply"></div>
+        {/* New Light Orange Blob for Process Section */}
+        <div className="absolute top-[36%] left-[10%] w-[50%] h-[15%] rounded-full bg-[#fed7aa] blur-[150px] opacity-50 mix-blend-multiply"></div>
+
 
         {/* --- SECTION 4: METHODOLOGIES & WHY PANELO (Distinct Colors) --- */}
         {/* Distinct Blue - Top Left of this section */}
