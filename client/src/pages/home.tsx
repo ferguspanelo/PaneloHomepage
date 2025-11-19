@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowRight, BarChart3, Layers, Users, Zap, Sparkles, Target } from "lucide-react";
+import { ArrowRight, Sparkles } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const FadeIn = ({ children, delay = 0, className }: { children: React.ReactNode; delay?: number; className?: string }) => (
@@ -19,18 +19,22 @@ export default function Home() {
     <div className="min-h-screen bg-white text-[#1a1a1a] selection:bg-[#ffaa4c] selection:text-white overflow-hidden relative">
       
       {/* Continuous Aurora Background - Spanning Hero & Features */}
-      <div className="absolute top-0 left-0 right-0 h-[220vh] z-0 overflow-hidden pointer-events-none">
+      <div className="absolute top-0 left-0 right-0 h-[400vh] z-0 overflow-hidden pointer-events-none">
         {/* Dark Orange - Top Left (Darker and slightly more opaque) */}
-        <div className="absolute -top-[10%] -left-[10%] w-[90%] h-[60%] rounded-full bg-[#c2410c] blur-[130px] opacity-50 mix-blend-multiply animate-blob" style={{ animationDelay: '0s' }}></div>
+        <div className="absolute -top-[5%] -left-[10%] w-[90%] h-[30%] rounded-full bg-[#c2410c] blur-[130px] opacity-50 mix-blend-multiply animate-blob" style={{ animationDelay: '0s' }}></div>
         
         {/* Light Orange - Top Right (Reduced opacity) */}
-        <div className="absolute top-[5%] -right-[10%] w-[80%] h-[70%] rounded-full bg-[#fb923c] blur-[110px] opacity-30 mix-blend-multiply animate-blob" style={{ animationDelay: '2s' }}></div>
+        <div className="absolute top-[2%] -right-[10%] w-[80%] h-[35%] rounded-full bg-[#fb923c] blur-[110px] opacity-30 mix-blend-multiply animate-blob" style={{ animationDelay: '2s' }}></div>
         
         {/* Blue - Moved further up and increased opacity for more presence */}
-        <div className="absolute top-[25%] right-[10%] w-[70%] h-[70%] rounded-full bg-[#60a5fa] blur-[130px] opacity-60 mix-blend-multiply animate-blob" style={{ animationDelay: '4s' }}></div>
+        <div className="absolute top-[10%] right-[10%] w-[70%] h-[35%] rounded-full bg-[#60a5fa] blur-[130px] opacity-60 mix-blend-multiply animate-blob" style={{ animationDelay: '4s' }}></div>
         
         {/* Grey - Mid/Bottom Right */}
-        <div className="absolute top-[45%] -right-[5%] w-[50%] h-[60%] rounded-full bg-[#94a3b8] blur-[100px] opacity-40 mix-blend-multiply animate-blob" style={{ animationDelay: '1s' }}></div>
+        <div className="absolute top-[20%] -right-[5%] w-[50%] h-[30%] rounded-full bg-[#94a3b8] blur-[100px] opacity-40 mix-blend-multiply animate-blob" style={{ animationDelay: '1s' }}></div>
+
+        {/* Extended background elements for the longer vertical section */}
+         <div className="absolute top-[40%] left-[10%] w-[60%] h-[30%] rounded-full bg-[#fb923c] blur-[150px] opacity-20 mix-blend-multiply animate-blob" style={{ animationDelay: '3s' }}></div>
+         <div className="absolute top-[60%] right-[20%] w-[70%] h-[30%] rounded-full bg-[#60a5fa] blur-[150px] opacity-20 mix-blend-multiply animate-blob" style={{ animationDelay: '5s' }}></div>
 
         {/* Fade to white at the bottom to remove harsh lines */}
         <div className="absolute bottom-0 left-0 right-0 h-[30vh] bg-gradient-to-t from-white via-white/80 to-transparent"></div>
@@ -87,96 +91,96 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Problem / Insight Section */}
+      {/* Features Section - Vertical ZigZag */}
       <section id="features" className="py-32 px-4 relative z-10">
         <div className="max-w-6xl mx-auto">
           <FadeIn>
-            <h2 className="text-4xl md:text-5xl font-display font-medium text-center mb-20 text-slate-900">
+            <h2 className="text-4xl md:text-5xl font-display font-medium text-center mb-32 text-slate-900">
               Consumer-Informed Product Assortment
             </h2>
           </FadeIn>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {/* Card 1 */}
-            <FadeIn delay={0.1}>
-              <div className="h-full p-8 rounded-3xl bg-white/50 border border-white/60 shadow-sm hover:shadow-md transition-all group backdrop-blur-sm">
-                <div className="w-12 h-12 rounded-2xl bg-orange-100 text-orange-600 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                  <Zap className="w-6 h-6" />
-                </div>
-                <h3 className="text-2xl font-display font-semibold mb-3">Supercharged Creativity</h3>
-                <p className="text-slate-600 leading-relaxed">
-                  AI allows designers to create more iterations than ever before. But which ones will resonate most? Don't guess.
-                </p>
-              </div>
-            </FadeIn>
-
-            {/* Card 2 */}
-            <FadeIn delay={0.2}>
-              <div className="h-full p-8 rounded-3xl bg-white/50 border border-white/60 shadow-sm hover:shadow-md transition-all group backdrop-blur-sm">
-                <div className="w-12 h-12 rounded-2xl bg-blue-100 text-blue-600 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                  <Users className="w-6 h-6" />
-                </div>
-                <h3 className="text-2xl font-display font-semibold mb-3">Consumers Decide</h3>
-                <p className="text-slate-600 leading-relaxed">
-                  Invite your audience to embed insights early. Optimize your success by letting the market choose the winners.
-                </p>
-              </div>
-            </FadeIn>
-
-            {/* Card 3 */}
-            <FadeIn delay={0.3}>
-              <div className="h-full p-8 rounded-3xl bg-white/50 border border-white/60 shadow-sm hover:shadow-md transition-all group backdrop-blur-sm">
-                <div className="w-12 h-12 rounded-2xl bg-slate-100 text-slate-600 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                  <BarChart3 className="w-6 h-6" />
-                </div>
-                <h3 className="text-2xl font-display font-semibold mb-3">Product Intelligence</h3>
-                <p className="text-slate-600 leading-relaxed">
-                  Transform community feedback into actionable data. Launch the right products in the right quantities.
-                </p>
-              </div>
-            </FadeIn>
-
-             {/* Card 4 */}
-             <FadeIn delay={0.4}>
-              <div className="h-full p-8 rounded-3xl bg-white/50 border border-white/60 shadow-sm hover:shadow-md transition-all group backdrop-blur-sm">
-                <div className="w-12 h-12 rounded-2xl bg-orange-100 text-orange-600 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                  <Target className="w-6 h-6" />
-                </div>
-                <h3 className="text-2xl font-display font-semibold mb-3">Avoid Costly Mistakes</h3>
-                <p className="text-slate-600 leading-relaxed">
-                  An informed and accurate inventory buy transforms your season performance and profitability.
-                </p>
-              </div>
-            </FadeIn>
-
-            {/* Card 5 (Span 2 cols on LG) */}
-            <FadeIn delay={0.5} className="lg:col-span-2">
-              <div className="h-full p-8 rounded-3xl bg-gradient-to-br from-slate-900 to-slate-800 text-white shadow-xl hover:shadow-2xl transition-all group relative overflow-hidden">
-                <div className="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full blur-3xl -mr-16 -mt-16"></div>
-                
-                <div className="relative z-10 flex flex-col md:flex-row gap-6 items-start md:items-center h-full">
-                  <div className="flex-1">
-                    <div className="w-12 h-12 rounded-2xl bg-white/10 text-white flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                      <Layers className="w-6 h-6" />
-                    </div>
-                    <h3 className="text-2xl font-display font-semibold mb-3">Profitability Driver</h3>
-                    <p className="text-slate-300 leading-relaxed">
-                      A new driver of profitability in your loyalty program. Your community informs inventory buys. Earn rewards for participation. Reduce waste.
-                    </p>
-                  </div>
-                  <div className="hidden md:block p-4 bg-white/10 rounded-xl border border-white/10 backdrop-blur-sm">
-                    <div className="text-xs uppercase tracking-wider opacity-70 mb-2">Predicted Demand</div>
-                    <div className="flex items-end gap-1 h-24 w-48">
-                      <div className="w-1/5 bg-white/20 h-[40%] rounded-t-sm"></div>
-                      <div className="w-1/5 bg-white/30 h-[60%] rounded-t-sm"></div>
-                      <div className="w-1/5 bg-orange-500 h-[85%] rounded-t-sm animate-pulse"></div>
-                      <div className="w-1/5 bg-white/30 h-[55%] rounded-t-sm"></div>
-                      <div className="w-1/5 bg-white/20 h-[45%] rounded-t-sm"></div>
-                    </div>
+          <div className="space-y-32">
+            {/* Item 1: Supercharged Creativity */}
+            <FadeIn>
+              <div className="flex flex-col md:flex-row items-center gap-12 md:gap-24">
+                <div className="flex-1 space-y-6 text-left">
+                  <h3 className="text-3xl md:text-4xl font-display font-normal text-[#1a1a1a]">Supercharged Creativity</h3>
+                  <div className="space-y-4 text-lg text-slate-600 font-light leading-relaxed">
+                    <p>AI allows designers to create more iterations than ever before.</p>
+                    <p>But which ones will resonate most? Don't guess.</p>
                   </div>
                 </div>
+                <div className="flex-1 w-full aspect-video rounded-3xl bg-slate-100/50 border border-white/50 shadow-sm backdrop-blur-sm flex items-center justify-center">
+                  <span className="text-slate-400 font-light">Image / Video Placeholder</span>
+                </div>
               </div>
             </FadeIn>
+
+            {/* Item 2: Consumers Decide */}
+            <FadeIn>
+              <div className="flex flex-col md:flex-row-reverse items-center gap-12 md:gap-24">
+                <div className="flex-1 space-y-6 text-left md:text-left"> {/* Kept text align left for consistency even on right side */}
+                  <h3 className="text-3xl md:text-4xl font-display font-normal text-[#1a1a1a]">Consumers Decide</h3>
+                  <div className="space-y-4 text-lg text-slate-600 font-light leading-relaxed">
+                    <p>Invite your audience to embed insights early.</p>
+                    <p>Optimize your success by letting the market choose the winners.</p>
+                  </div>
+                </div>
+                <div className="flex-1 w-full aspect-video rounded-3xl bg-slate-100/50 border border-white/50 shadow-sm backdrop-blur-sm flex items-center justify-center">
+                  <span className="text-slate-400 font-light">Image / Video Placeholder</span>
+                </div>
+              </div>
+            </FadeIn>
+
+            {/* Item 3: Product Intelligence */}
+            <FadeIn>
+              <div className="flex flex-col md:flex-row items-center gap-12 md:gap-24">
+                <div className="flex-1 space-y-6 text-left">
+                  <h3 className="text-3xl md:text-4xl font-display font-normal text-[#1a1a1a]">Product Intelligence</h3>
+                  <div className="space-y-4 text-lg text-slate-600 font-light leading-relaxed">
+                    <p>Transform community feedback into actionable data.</p>
+                    <p>Launch the right products in the right quantities.</p>
+                  </div>
+                </div>
+                <div className="flex-1 w-full aspect-video rounded-3xl bg-slate-100/50 border border-white/50 shadow-sm backdrop-blur-sm flex items-center justify-center">
+                  <span className="text-slate-400 font-light">Image / Video Placeholder</span>
+                </div>
+              </div>
+            </FadeIn>
+
+            {/* Item 4: Avoid Costly Mistakes */}
+            <FadeIn>
+              <div className="flex flex-col md:flex-row-reverse items-center gap-12 md:gap-24">
+                <div className="flex-1 space-y-6 text-left">
+                  <h3 className="text-3xl md:text-4xl font-display font-normal text-[#1a1a1a]">Avoid Costly Mistakes</h3>
+                  <div className="space-y-4 text-lg text-slate-600 font-light leading-relaxed">
+                     <p>An informed and accurate inventory buy transforms your season.</p>
+                     <p>Maximize performance and ensure long-term profitability.</p>
+                  </div>
+                </div>
+                <div className="flex-1 w-full aspect-video rounded-3xl bg-slate-100/50 border border-white/50 shadow-sm backdrop-blur-sm flex items-center justify-center">
+                  <span className="text-slate-400 font-light">Image / Video Placeholder</span>
+                </div>
+              </div>
+            </FadeIn>
+
+            {/* Item 5: Profitability Driver */}
+            <FadeIn>
+              <div className="flex flex-col md:flex-row items-center gap-12 md:gap-24">
+                <div className="flex-1 space-y-6 text-left">
+                  <h3 className="text-3xl md:text-4xl font-display font-normal text-[#1a1a1a]">Profitability Driver</h3>
+                  <div className="space-y-4 text-lg text-slate-600 font-light leading-relaxed">
+                    <p>A new driver of profitability in your loyalty program.</p>
+                    <p>Your community informs inventory buys. Earn rewards for participation.</p>
+                  </div>
+                </div>
+                <div className="flex-1 w-full aspect-video rounded-3xl bg-slate-100/50 border border-white/50 shadow-sm backdrop-blur-sm flex items-center justify-center">
+                  <span className="text-slate-400 font-light">Image / Video Placeholder</span>
+                </div>
+              </div>
+            </FadeIn>
+
           </div>
         </div>
       </section>
