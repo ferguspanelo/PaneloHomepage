@@ -1,0 +1,259 @@
+import { motion } from "framer-motion";
+import { ArrowRight, BarChart3, Layers, Users, Zap, Sparkles, Target } from "lucide-react";
+import { cn } from "@/lib/utils";
+
+const FadeIn = ({ children, delay = 0, className }: { children: React.ReactNode; delay?: number; className?: string }) => (
+  <motion.div
+    initial={{ opacity: 0, y: 20 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    viewport={{ once: true }}
+    transition={{ duration: 0.6, delay, ease: "easeOut" }}
+    className={className}
+  >
+    {children}
+  </motion.div>
+);
+
+export default function Home() {
+  return (
+    <div className="min-h-screen bg-[#f8f5f2] text-[#1a1a1a] selection:bg-[#ffaa4c] selection:text-white overflow-hidden">
+      
+      {/* Navigation */}
+      <nav className="fixed top-0 left-0 right-0 z-50 px-6 py-6 flex justify-between items-center bg-transparent mix-blend-difference text-white">
+        {/* We use mix-blend-difference to ensure text is visible on any background, giving it that ethereal tech feel */}
+        <div className="text-2xl font-bold tracking-tighter font-display">Panelo</div>
+        <div className="hidden md:flex gap-8 text-sm font-medium tracking-wide">
+          <a href="#features" className="hover:opacity-70 transition-opacity">Capabilities</a>
+          <a href="#process" className="hover:opacity-70 transition-opacity">Process</a>
+          <a href="#" className="hover:opacity-70 transition-opacity">Login</a>
+        </div>
+      </nav>
+
+      {/* Hero Section */}
+      <section className="relative min-h-screen flex flex-col items-center justify-center text-center px-4 py-20">
+        {/* Aurora Gradient Background */}
+        <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
+          <div className="absolute -top-[20%] -left-[10%] w-[70%] h-[70%] rounded-full bg-[#ff9a9e] blur-[120px] opacity-60 mix-blend-multiply animate-pulse" style={{ animationDuration: '8s' }}></div>
+          <div className="absolute top-[10%] -right-[10%] w-[60%] h-[60%] rounded-full bg-[#fecfef] blur-[100px] opacity-60 mix-blend-multiply animate-pulse" style={{ animationDuration: '10s', animationDelay: '1s' }}></div>
+          <div className="absolute -bottom-[20%] left-[20%] w-[80%] h-[80%] rounded-full bg-[#a1c4fd] blur-[120px] opacity-40 mix-blend-multiply animate-pulse" style={{ animationDuration: '12s', animationDelay: '2s' }}></div>
+          <div className="absolute bottom-[10%] right-[20%] w-[50%] h-[50%] rounded-full bg-[#f6d365] blur-[100px] opacity-50 mix-blend-multiply animate-pulse" style={{ animationDuration: '9s', animationDelay: '0.5s' }}></div>
+        </div>
+
+        <div className="relative z-10 max-w-5xl mx-auto space-y-8">
+          <FadeIn delay={0.2}>
+            <div className="mb-8 flex justify-center">
+              <div className="flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/30 backdrop-blur-md border border-white/40 text-sm font-medium text-slate-800 shadow-sm">
+                <Sparkles className="w-3.5 h-3.5 text-orange-500" />
+                <span>AI-Powered Product Intelligence</span>
+              </div>
+            </div>
+          </FadeIn>
+
+          <FadeIn delay={0.3}>
+            <h1 className="text-6xl md:text-8xl font-display font-semibold tracking-tight leading-[0.95] text-[#1a1a1a]">
+              Identify your winners early. <br />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 via-pink-500 to-purple-600">
+                Launch smarter.
+              </span>
+            </h1>
+          </FadeIn>
+
+          <FadeIn delay={0.4}>
+            <p className="text-xl md:text-2xl text-slate-600 max-w-2xl mx-auto leading-relaxed font-light">
+              Embed consumer insight into your product range architecture. Decode the why before you invest.
+            </p>
+          </FadeIn>
+
+          <FadeIn delay={0.5} className="pt-8">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="px-8 py-4 rounded-full bg-[#1a1a1a] text-white font-medium text-lg hover:bg-slate-800 transition-all shadow-lg hover:shadow-xl active:scale-95 flex items-center justify-center gap-2 group">
+                Start Predicting Demand
+                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+              </button>
+              <button className="px-8 py-4 rounded-full bg-white/50 backdrop-blur-sm border border-white/60 text-[#1a1a1a] font-medium text-lg hover:bg-white/80 transition-all shadow-sm hover:shadow-md active:scale-95">
+                Book a Demo
+              </button>
+            </div>
+          </FadeIn>
+        </div>
+
+        {/* Floating Elements / Visual Interest */}
+        <div className="absolute bottom-10 left-0 right-0 flex justify-center animate-bounce duration-[3000ms]">
+           <div className="w-px h-16 bg-gradient-to-b from-slate-400/0 via-slate-400 to-slate-400/0"></div>
+        </div>
+      </section>
+
+      {/* Problem / Insight Section */}
+      <section id="features" className="py-32 px-4 relative bg-white/40 backdrop-blur-3xl">
+        <div className="max-w-6xl mx-auto">
+          <FadeIn>
+            <h2 className="text-4xl md:text-5xl font-display font-medium text-center mb-20">
+              Consumer-Informed Product Assortment
+            </h2>
+          </FadeIn>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {/* Card 1 */}
+            <FadeIn delay={0.1}>
+              <div className="h-full p-8 rounded-3xl bg-white/60 border border-white/80 shadow-sm hover:shadow-md transition-all group">
+                <div className="w-12 h-12 rounded-2xl bg-orange-100 text-orange-600 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                  <Zap className="w-6 h-6" />
+                </div>
+                <h3 className="text-2xl font-display font-semibold mb-3">Supercharged Creativity</h3>
+                <p className="text-slate-600 leading-relaxed">
+                  AI allows designers to create more iterations than ever before. But which ones will resonate most? Don't guess.
+                </p>
+              </div>
+            </FadeIn>
+
+            {/* Card 2 */}
+            <FadeIn delay={0.2}>
+              <div className="h-full p-8 rounded-3xl bg-white/60 border border-white/80 shadow-sm hover:shadow-md transition-all group">
+                <div className="w-12 h-12 rounded-2xl bg-pink-100 text-pink-600 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                  <Users className="w-6 h-6" />
+                </div>
+                <h3 className="text-2xl font-display font-semibold mb-3">Consumers Decide</h3>
+                <p className="text-slate-600 leading-relaxed">
+                  Invite your audience to embed insights early. Optimize your success by letting the market choose the winners.
+                </p>
+              </div>
+            </FadeIn>
+
+            {/* Card 3 */}
+            <FadeIn delay={0.3}>
+              <div className="h-full p-8 rounded-3xl bg-white/60 border border-white/80 shadow-sm hover:shadow-md transition-all group">
+                <div className="w-12 h-12 rounded-2xl bg-purple-100 text-purple-600 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                  <BarChart3 className="w-6 h-6" />
+                </div>
+                <h3 className="text-2xl font-display font-semibold mb-3">Product Intelligence</h3>
+                <p className="text-slate-600 leading-relaxed">
+                  Transform community feedback into actionable data. Launch the right products in the right quantities.
+                </p>
+              </div>
+            </FadeIn>
+
+             {/* Card 4 */}
+             <FadeIn delay={0.4}>
+              <div className="h-full p-8 rounded-3xl bg-white/60 border border-white/80 shadow-sm hover:shadow-md transition-all group">
+                <div className="w-12 h-12 rounded-2xl bg-blue-100 text-blue-600 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                  <Target className="w-6 h-6" />
+                </div>
+                <h3 className="text-2xl font-display font-semibold mb-3">Avoid Costly Mistakes</h3>
+                <p className="text-slate-600 leading-relaxed">
+                  An informed and accurate inventory buy transforms your season performance and profitability.
+                </p>
+              </div>
+            </FadeIn>
+
+            {/* Card 5 (Span 2 cols on LG) */}
+            <FadeIn delay={0.5} className="lg:col-span-2">
+              <div className="h-full p-8 rounded-3xl bg-gradient-to-br from-slate-900 to-slate-800 text-white shadow-xl hover:shadow-2xl transition-all group relative overflow-hidden">
+                <div className="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full blur-3xl -mr-16 -mt-16"></div>
+                
+                <div className="relative z-10 flex flex-col md:flex-row gap-6 items-start md:items-center h-full">
+                  <div className="flex-1">
+                    <div className="w-12 h-12 rounded-2xl bg-white/10 text-white flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                      <Layers className="w-6 h-6" />
+                    </div>
+                    <h3 className="text-2xl font-display font-semibold mb-3">Profitability Driver</h3>
+                    <p className="text-slate-300 leading-relaxed">
+                      A new driver of profitability in your loyalty program. Your community informs inventory buys. Earn rewards for participation. Reduce waste.
+                    </p>
+                  </div>
+                  <div className="hidden md:block p-4 bg-white/10 rounded-xl border border-white/10 backdrop-blur-sm">
+                    <div className="text-xs uppercase tracking-wider opacity-70 mb-2">Predicted Demand</div>
+                    <div className="flex items-end gap-1 h-24 w-48">
+                      <div className="w-1/5 bg-white/20 h-[40%] rounded-t-sm"></div>
+                      <div className="w-1/5 bg-white/30 h-[60%] rounded-t-sm"></div>
+                      <div className="w-1/5 bg-orange-400 h-[85%] rounded-t-sm animate-pulse"></div>
+                      <div className="w-1/5 bg-white/30 h-[55%] rounded-t-sm"></div>
+                      <div className="w-1/5 bg-white/20 h-[45%] rounded-t-sm"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </FadeIn>
+          </div>
+        </div>
+      </section>
+
+      {/* Process Section */}
+      <section id="process" className="py-32 px-4 bg-white">
+        <div className="max-w-4xl mx-auto">
+          <FadeIn>
+            <div className="text-center mb-20">
+              <h2 className="text-4xl md:text-5xl font-display font-medium text-[#1a1a1a] mb-4">The Panelo Process</h2>
+              <p className="text-xl text-slate-500">From design to demand in three steps.</p>
+            </div>
+          </FadeIn>
+
+          <div className="space-y-16 relative">
+            {/* Connector Line */}
+            <div className="absolute left-[27px] md:left-1/2 top-0 bottom-0 w-0.5 bg-slate-100 -z-10 md:-translate-x-1/2"></div>
+
+            {/* Step 1 */}
+            <div className="flex flex-col md:flex-row gap-8 md:gap-16 items-center group">
+              <div className="flex-1 md:text-right order-2 md:order-1">
+                <FadeIn delay={0.1} className="md:ml-auto">
+                  <h3 className="text-2xl font-semibold mb-2">Upload Prospective Designs</h3>
+                  <p className="text-slate-600">Input your concepts, sketches, or renders directly into the platform.</p>
+                </FadeIn>
+              </div>
+              
+              <div className="relative z-10 order-1 md:order-2 flex-shrink-0">
+                <div className="w-14 h-14 rounded-full bg-white border-4 border-orange-100 text-orange-500 font-bold text-xl flex items-center justify-center shadow-sm group-hover:scale-110 group-hover:border-orange-200 transition-all duration-300">1</div>
+              </div>
+              
+              <div className="flex-1 order-3 hidden md:block"></div>
+            </div>
+
+            {/* Step 2 */}
+            <div className="flex flex-col md:flex-row gap-8 md:gap-16 items-center group">
+              <div className="flex-1 hidden md:block order-1"></div>
+              
+              <div className="relative z-10 order-1 md:order-2 flex-shrink-0">
+                <div className="w-14 h-14 rounded-full bg-white border-4 border-pink-100 text-pink-500 font-bold text-xl flex items-center justify-center shadow-sm group-hover:scale-110 group-hover:border-pink-200 transition-all duration-300">2</div>
+              </div>
+              
+              <div className="flex-1 order-2 md:order-3">
+                 <FadeIn delay={0.2}>
+                  <h3 className="text-2xl font-semibold mb-2">Collect Community Feedback</h3>
+                  <ul className="space-y-2 text-slate-600">
+                    <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-pink-400"></div>Product Ranking</li>
+                    <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-pink-400"></div>Attribute Level Insights</li>
+                    <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-pink-400"></div>Preference Mapping</li>
+                  </ul>
+                </FadeIn>
+              </div>
+            </div>
+
+            {/* Step 3 */}
+            <div className="flex flex-col md:flex-row gap-8 md:gap-16 items-center group">
+              <div className="flex-1 md:text-right order-2 md:order-1">
+                <FadeIn delay={0.3} className="md:ml-auto">
+                  <h3 className="text-2xl font-semibold mb-2">Predict Demand</h3>
+                  <p className="text-slate-600">Panelo analyzes the data to surface what drives preference and predicts market success.</p>
+                </FadeIn>
+              </div>
+              
+              <div className="relative z-10 order-1 md:order-2 flex-shrink-0">
+                <div className="w-14 h-14 rounded-full bg-white border-4 border-purple-100 text-purple-500 font-bold text-xl flex items-center justify-center shadow-sm group-hover:scale-110 group-hover:border-purple-200 transition-all duration-300">3</div>
+              </div>
+              
+              <div className="flex-1 order-3 hidden md:block"></div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="py-20 bg-[#1a1a1a] text-white">
+        <div className="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-8">
+          <div className="text-3xl font-display font-bold tracking-tighter">Panelo</div>
+          <div className="text-slate-400 text-sm">© 2025 Panelo Inc. All rights reserved.</div>
+        </div>
+      </footer>
+    </div>
+  );
+}
