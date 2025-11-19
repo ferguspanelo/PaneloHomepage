@@ -79,7 +79,7 @@ export default function Home() {
 
           <FadeIn delay={0.5}>
             <p className="text-xl md:text-2xl text-slate-700 max-w-2xl mx-auto leading-relaxed font-light mt-4">
-              Embed consumer insights into your product range architecture and drive profitabilty through you loyalty program.
+              Embed consumer insights into your product range architecture and drive profitability through your loyalty program.
             </p>
           </FadeIn>
 
