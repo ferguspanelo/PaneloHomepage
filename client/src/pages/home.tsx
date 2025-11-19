@@ -606,10 +606,10 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer className="py-20 bg-[#431407] text-white relative z-10">
+      <footer className="py-20 bg-transparent text-[#1a1a1a] relative z-10">
         <div className="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-8">
           <div className="text-3xl font-display font-bold tracking-tighter">Panelo</div>
-          <div className="text-slate-400 text-sm">© 2025 Panelo Inc. All rights reserved.</div>
+          <div className="text-slate-600 text-sm">© 2025 Panelo Inc. All rights reserved.</div>
         </div>
       </footer>
     </div>
