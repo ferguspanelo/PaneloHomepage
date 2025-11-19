@@ -1,5 +1,6 @@
-import { motion } from "framer-motion";
-import { ArrowRight, Sparkles, Trophy, SlidersHorizontal, Heart, Check, X, Plus, Minus, CheckCircle2, XCircle } from "lucide-react";
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { ArrowRight, Sparkles, Trophy, SlidersHorizontal, Heart, Check, X, Plus, Minus, CheckCircle2, XCircle, Menu } from "lucide-react";
 import { cn } from "@/lib/utils";
 import {
   Accordion,
@@ -21,6 +22,8 @@ const FadeIn = ({ children, delay = 0, className }: { children: React.ReactNode;
 );
 
 export default function Home() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   return (
     <div className="min-h-screen bg-white text-[#1a1a1a] selection:bg-[#ffaa4c] selection:text-white overflow-hidden relative">
       
@@ -73,7 +76,9 @@ export default function Home() {
 
       {/* Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-50 px-6 py-6 flex justify-between items-center bg-transparent text-[#1a1a1a]">
-        <div className="text-2xl font-bold tracking-tighter font-display">Panelo</div>
+        <div className="text-2xl font-bold tracking-tighter font-display z-50">Panelo</div>
+        
+        {/* Desktop Nav */}
         <div className="hidden md:flex items-center gap-12">
           <div className="flex gap-8 text-sm font-medium tracking-wide">
             <a href="#features" className="hover:opacity-70 transition-opacity">Product</a>
@@ -89,7 +94,41 @@ export default function Home() {
              </button>
           </div>
         </div>
+
+        {/* Mobile Menu Toggle */}
+        <button 
+          className="md:hidden relative z-50 p-2 -mr-2"
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
+        >
+          {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+        </button>
+
+        {/* Mobile Menu Overlay */}
+        <AnimatePresence>
+          {isMenuOpen && (
+            <motion.div
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+              className="fixed inset-0 z-40 bg-white/95 backdrop-blur-xl pt-24 px-6 md:hidden"
+            >
+              <div className="flex flex-col gap-8 text-lg font-medium">
+                <a href="#features" onClick={() => setIsMenuOpen(false)} className="block py-2 border-b border-slate-100">Product</a>
+                <a href="#process" onClick={() => setIsMenuOpen(false)} className="block py-2 border-b border-slate-100">Process</a>
+                <a href="#pricing" onClick={() => setIsMenuOpen(false)} className="block py-2 border-b border-slate-100">Pricing</a>
+                <button className="text-left py-2 text-slate-600">Log in</button>
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
       </nav>
+
+      {/* Mobile Sticky Bottom CTA */}
+      <div className="fixed bottom-6 left-0 right-0 z-50 px-4 md:hidden">
+        <button className="w-full py-4 rounded-full bg-[#1a1a1a] text-white text-lg font-medium shadow-2xl flex items-center justify-center gap-2 active:scale-95 transition-transform">
+          Get Started
+        </button>
+      </div>
 
       {/* Hero Section */}
       <section className="relative z-10 min-h-screen flex flex-col items-center justify-center text-center px-4 py-20">
@@ -126,7 +165,7 @@ export default function Home() {
 
           <FadeIn delay={0.6} className="pt-8">
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="px-8 py-4 rounded-full bg-[#1a1a1a] text-white font-medium text-lg hover:bg-slate-800 transition-all shadow-lg hover:shadow-xl active:scale-95 flex items-center justify-center gap-2 group">
+              <button className="px-8 py-4 rounded-full bg-[#1a1a1a] text-white font-medium text-lg hover:bg-slate-800 transition-all shadow-lg hover:shadow-xl active:scale-95 flex items-center justify-center gap-2 group hidden md:flex">
                 Start Predicting Demand
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </button>
