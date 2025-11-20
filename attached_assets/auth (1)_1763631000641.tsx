@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { Check, User, BarChart3, Shield, Zap, Star, ChevronDown } from "lucide-react";
