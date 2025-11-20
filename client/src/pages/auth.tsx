@@ -73,45 +73,6 @@ export default function Auth() {
                     </button>
                 </form>
             </motion.div>
-
-            {/* Why Choose Card */}
-            <motion.div 
-                 initial={{ opacity: 0, y: 20 }}
-                 animate={{ opacity: 1, y: 0 }}
-                 transition={{ delay: 0.2 }}
-                 className="bg-white/60 backdrop-blur-md rounded-3xl p-8 border border-white/50 shadow-sm"
-            >
-                <h3 className="text-sm font-semibold text-slate-500 uppercase tracking-wider mb-6 text-center">Why Industry Leaders Choose Panelo</h3>
-                <div className="space-y-5">
-                    <div className="flex gap-4 items-start">
-                        <div className="w-8 h-8 rounded-lg bg-blue-100 text-blue-600 flex items-center justify-center flex-shrink-0">
-                            <BarChart3 className="w-4 h-4" />
-                        </div>
-                        <div>
-                            <p className="text-xs font-medium text-slate-800 mb-0.5">Advanced Elo algorithms</p>
-                            <p className="text-xs text-slate-500 leading-relaxed">Statistically significant insights for complex product comparisons.</p>
-                        </div>
-                    </div>
-                    <div className="flex gap-4 items-start">
-                        <div className="w-8 h-8 rounded-lg bg-green-100 text-green-600 flex items-center justify-center flex-shrink-0">
-                            <Zap className="w-4 h-4" />
-                        </div>
-                        <div>
-                            <p className="text-xs font-medium text-slate-800 mb-0.5">AI-powered analysis</p>
-                            <p className="text-xs text-slate-500 leading-relaxed">Automated attribute extraction and trend forecasting.</p>
-                        </div>
-                    </div>
-                    <div className="flex gap-4 items-start">
-                        <div className="w-8 h-8 rounded-lg bg-purple-100 text-purple-600 flex items-center justify-center flex-shrink-0">
-                            <Shield className="w-4 h-4" />
-                        </div>
-                        <div>
-                            <p className="text-xs font-medium text-slate-800 mb-0.5">Enterprise Security</p>
-                            <p className="text-xs text-slate-500 leading-relaxed">SOC2 compliant infrastructure with data encryption.</p>
-                        </div>
-                    </div>
-                </div>
-            </motion.div>
         </div>
 
         {/* RIGHT COLUMN - Plans */}
