@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ArrowRight, Sparkles, Trophy, SlidersHorizontal, Heart, Check, X, Plus, Minus, CheckCircle2, XCircle, Menu } from "lucide-react";
+import { Link, useLocation } from "wouter";
 import { cn } from "@/lib/utils";
 import {
   Accordion,
@@ -23,6 +24,7 @@ const FadeIn = ({ children, delay = 0, className }: { children: React.ReactNode;
 
 export default function Home() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [, setLocation] = useLocation();
 
   return (
     <div className="min-h-screen bg-white text-[#1a1a1a] selection:bg-[#ffaa4c] selection:text-white overflow-hidden relative">
@@ -78,7 +80,7 @@ export default function Home() {
 
       {/* Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-50 px-6 py-6 flex justify-between items-center bg-transparent text-[#1a1a1a]">
-        <div className="text-2xl font-bold tracking-tighter font-display z-50">Panelo</div>
+        <div className="text-2xl font-bold tracking-tighter font-display z-50 cursor-pointer" onClick={() => setLocation('/')}>Panelo</div>
         
         {/* Desktop Nav */}
         <div className="hidden md:flex items-center gap-12">
@@ -88,12 +90,16 @@ export default function Home() {
             <a href="#pricing" className="hover:opacity-70 transition-opacity">Pricing</a>
           </div>
           <div className="flex items-center gap-3">
-             <button className="px-6 py-2.5 rounded-full bg-white/40 backdrop-blur-md border border-white/20 text-slate-800 text-sm font-medium hover:bg-white/50 transition-all shadow-sm">
-               Log in
-             </button>
-             <button className="px-6 py-2.5 rounded-full bg-[#1a1a1a]/80 backdrop-blur-md border border-[#1a1a1a]/50 text-white text-sm font-medium hover:bg-[#1a1a1a] transition-all shadow-sm">
-               Get Started
-             </button>
+             <Link href="/auth">
+                <button className="px-6 py-2.5 rounded-full bg-white/40 backdrop-blur-md border border-white/20 text-slate-800 text-sm font-medium hover:bg-white/50 transition-all shadow-sm">
+                  Log in
+                </button>
+             </Link>
+             <Link href="/auth">
+                <button className="px-6 py-2.5 rounded-full bg-[#1a1a1a]/80 backdrop-blur-md border border-[#1a1a1a]/50 text-white text-sm font-medium hover:bg-[#1a1a1a] transition-all shadow-sm">
+                  Get Started
+                </button>
+             </Link>
           </div>
         </div>
 
@@ -118,7 +124,7 @@ export default function Home() {
                 <a href="#features" onClick={() => setIsMenuOpen(false)} className="block py-2 border-b border-slate-100">Product</a>
                 <a href="#process" onClick={() => setIsMenuOpen(false)} className="block py-2 border-b border-slate-100">Process</a>
                 <a href="#pricing" onClick={() => setIsMenuOpen(false)} className="block py-2 border-b border-slate-100">Pricing</a>
-                <button className="text-left py-2 text-slate-600">Log in</button>
+                <Link href="/auth" onClick={() => setIsMenuOpen(false)} className="text-left py-2 text-slate-600">Log in</Link>
               </div>
             </motion.div>
           )}
@@ -127,9 +133,11 @@ export default function Home() {
 
       {/* Mobile Sticky Bottom CTA */}
       <div className="fixed bottom-6 left-0 right-0 z-50 px-4 md:hidden">
-        <button className="w-full py-4 rounded-full bg-[#1a1a1a] text-white text-lg font-medium shadow-2xl flex items-center justify-center gap-2 active:scale-95 transition-transform">
-          Get Started
-        </button>
+        <Link href="/auth">
+          <button className="w-full py-4 rounded-full bg-[#1a1a1a] text-white text-lg font-medium shadow-2xl flex items-center justify-center gap-2 active:scale-95 transition-transform">
+            Get Started
+          </button>
+        </Link>
       </div>
 
       {/* Hero Section */}
@@ -167,10 +175,12 @@ export default function Home() {
 
           <FadeIn delay={0.6} className="pt-8">
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="px-8 py-4 rounded-full bg-[#1a1a1a] text-white font-medium text-lg hover:bg-slate-800 transition-all shadow-lg hover:shadow-xl active:scale-95 flex items-center justify-center gap-2 group hidden md:flex">
-                Start Predicting Demand
-                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-              </button>
+              <Link href="/auth">
+                <button className="px-8 py-4 rounded-full bg-[#1a1a1a] text-white font-medium text-lg hover:bg-slate-800 transition-all shadow-lg hover:shadow-xl active:scale-95 flex items-center justify-center gap-2 group hidden md:flex">
+                  Start Predicting Demand
+                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                </button>
+              </Link>
               <button className="px-8 py-4 rounded-full bg-white/40 backdrop-blur-sm border border-white/60 text-[#1a1a1a] font-medium text-lg hover:bg-white/70 transition-all shadow-sm hover:shadow-md active:scale-95">
                 Book a Demo
               </button>
