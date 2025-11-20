@@ -21,8 +21,6 @@ export default function Auth() {
         <Link href="/">
             <h1 className="text-4xl font-display font-bold tracking-tighter cursor-pointer hover:opacity-80 transition-opacity inline-block">Panelo</h1>
         </Link>
-        <p className="text-slate-500 mt-2 font-medium">Enterprise Product Intelligence Platform</p>
-        <p className="text-slate-400 text-sm mt-1 max-w-lg mx-auto">Sophisticated analytics powered by AI-driven insights and advanced statistical modeling</p>
         
         <div className="flex flex-wrap justify-center gap-3 sm:gap-4 mt-6">
             <span className="px-3 py-1 rounded-full bg-white/50 backdrop-blur-sm border border-white/60 text-xs font-medium text-slate-600 flex items-center gap-1"><Zap className="w-3 h-3 text-green-500"/> AI-Powered</span>
@@ -34,7 +32,7 @@ export default function Auth() {
       <div className="relative z-10 max-w-7xl mx-auto px-4 py-8 grid lg:grid-cols-12 gap-8 items-start">
         
         {/* LEFT COLUMN - Auth Form */}
-        <div className="lg:col-span-5 space-y-6">
+        <div className="lg:col-span-5 space-y-6 lg:mt-24">
             {/* Auth Card */}
             <motion.div 
                 initial={{ opacity: 0, x: -20 }}
