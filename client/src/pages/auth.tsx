@@ -1,7 +1,14 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { Check, User, BarChart3, Shield, Zap, Star } from "lucide-react";
+import { Check, User, BarChart3, Shield, Zap, Star, ChevronDown } from "lucide-react";
 import { Link } from "wouter";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 
 export default function Auth() {
   const [isSignUp, setIsSignUp] = useState(false);
@@ -32,7 +39,7 @@ export default function Auth() {
       <div className="relative z-10 max-w-7xl mx-auto px-4 py-8 grid lg:grid-cols-12 gap-8 items-start">
         
         {/* LEFT COLUMN - Auth Form */}
-        <div className="lg:col-span-5 space-y-6 lg:mt-24">
+        <div className="lg:col-span-5 space-y-6 lg:mt-12">
             {/* Auth Card */}
             <motion.div 
                 initial={{ opacity: 0, x: -20 }}
@@ -51,24 +58,75 @@ export default function Auth() {
                 </div>
 
                 <form className="space-y-5" onSubmit={(e) => e.preventDefault()}>
-                    <div className="space-y-2">
-                        <label className="text-sm font-medium text-slate-700">Email Address</label>
-                        <input type="email" placeholder="demo@panelo.app" className="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition-all" />
-                    </div>
-                    <div className="space-y-2">
-                        <label className="text-sm font-medium text-slate-700">Password</label>
-                        <input type="password" placeholder="•••••••" className="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition-all" />
-                    </div>
+                    {isSignUp ? (
+                        <>
+                            <div className="space-y-2">
+                                <label className="text-sm font-medium text-slate-700">Company Name</label>
+                                <input type="text" placeholder="Enter your company name" className="w-full px-4 py-3 rounded-xl bg-white border border-slate-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition-all text-sm placeholder:text-slate-400" />
+                            </div>
 
-                    {!isSignUp && (
-                         <div className="flex justify-end">
-                            <button className="text-xs text-blue-600 font-medium hover:underline">Forgot your password?</button>
-                        </div>
+                            <div className="space-y-2">
+                                <label className="text-sm font-medium text-slate-700">Business Email</label>
+                                <input type="email" placeholder="demo@panelo.app" className="w-full px-4 py-3 rounded-xl bg-blue-50/50 border border-blue-100 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition-all text-sm" />
+                            </div>
+
+                            <div className="grid grid-cols-2 gap-4">
+                                <div className="space-y-2">
+                                    <label className="text-sm font-medium text-slate-700">Password</label>
+                                    <input type="password" placeholder="•••••••" className="w-full px-4 py-3 rounded-xl bg-blue-50/50 border border-blue-100 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition-all text-sm" />
+                                </div>
+                                <div className="space-y-2">
+                                    <label className="text-sm font-medium text-slate-700">Confirm</label>
+                                    <input type="password" placeholder="Confirm password" className="w-full px-4 py-3 rounded-xl bg-white border border-slate-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition-all text-sm placeholder:text-slate-400" />
+                                </div>
+                            </div>
+
+                            <div className="space-y-2">
+                                <label className="text-sm font-medium text-slate-700">Enterprise Plan</label>
+                                <Select defaultValue="starter">
+                                  <SelectTrigger className="w-full px-4 py-3 h-auto rounded-xl bg-white border border-slate-200 focus:ring-2 focus:ring-blue-200 outline-none transition-all text-sm">
+                                    <SelectValue placeholder="Select a plan" />
+                                  </SelectTrigger>
+                                  <SelectContent>
+                                    <SelectItem value="freemium">Freemium - $0/forever</SelectItem>
+                                    <SelectItem value="starter">
+                                        <span className="flex items-center gap-2">
+                                            <BarChart3 className="w-4 h-4" /> Starter - $299/month <span className="ml-2 px-1.5 py-0.5 rounded bg-indigo-100 text-indigo-600 text-[10px] font-bold flex items-center gap-1"><Star className="w-3 h-3 fill-current" /> Recommended</span>
+                                        </span>
+                                    </SelectItem>
+                                    <SelectItem value="professional">Professional - $999/month</SelectItem>
+                                  </SelectContent>
+                                </Select>
+                            </div>
+
+                            <button className="w-full py-3.5 rounded-xl bg-gradient-to-r from-teal-600 to-teal-500 text-white font-medium shadow-lg hover:shadow-teal-500/25 hover:opacity-95 transition-all active:scale-[0.98] mt-4">
+                                Create Enterprise Account
+                            </button>
+                            
+                            <p className="text-xs text-slate-400 text-center leading-relaxed px-4">
+                                By creating an account, you agree to our Terms of Service and Privacy Policy
+                            </p>
+                        </>
+                    ) : (
+                        <>
+                            <div className="space-y-2">
+                                <label className="text-sm font-medium text-slate-700">Email Address</label>
+                                <input type="email" placeholder="demo@panelo.app" className="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition-all" />
+                            </div>
+                            <div className="space-y-2">
+                                <label className="text-sm font-medium text-slate-700">Password</label>
+                                <input type="password" placeholder="•••••••" className="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition-all" />
+                            </div>
+
+                            <div className="flex justify-end">
+                                <button className="text-xs text-blue-600 font-medium hover:underline">Forgot your password?</button>
+                            </div>
+
+                            <button className="w-full py-3.5 rounded-xl bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-medium shadow-lg hover:shadow-blue-500/25 hover:opacity-95 transition-all active:scale-[0.98] mt-4">
+                                Access Platform
+                            </button>
+                        </>
                     )}
-
-                    <button className="w-full py-3.5 rounded-xl bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-medium shadow-lg hover:shadow-blue-500/25 hover:opacity-95 transition-all active:scale-[0.98] mt-4">
-                        {isSignUp ? 'Create Account' : 'Access Platform'}
-                    </button>
                 </form>
             </motion.div>
         </div>
