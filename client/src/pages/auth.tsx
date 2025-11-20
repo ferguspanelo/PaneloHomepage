@@ -122,8 +122,8 @@ export default function Auth() {
                                 <button className="text-xs text-blue-600 font-medium hover:underline">Forgot your password?</button>
                             </div>
 
-                            <button className="w-full py-3.5 rounded-xl bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-medium shadow-lg hover:shadow-blue-500/25 hover:opacity-95 transition-all active:scale-[0.98] mt-4">
-                                Access Platform
+                            <button className="w-full py-3.5 rounded-xl bg-slate-900/80 backdrop-blur-md border border-slate-800/50 text-white font-medium shadow-lg hover:bg-slate-900 transition-all active:scale-[0.98] mt-4">
+                                Sign In
                             </button>
                         </>
                     )}
